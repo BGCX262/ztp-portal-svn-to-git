@@ -1,0 +1,1961 @@
+@charset "UTF-8";
+
+/*=======================================================*/
+/*	Page						 */
+/*=======================================================*/
+body{	
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+
+	/*text-align: left;*/
+
+	color: black;
+	background-color: transparent;
+	background-image: url(../img/squareSilver.png);
+
+	border: none;
+                
+	margin: 0px;
+	padding: 0px; 
+}
+
+/*=======================================================*/
+/*	Tables - header			 		 */
+/*=======================================================*/
+thead tr.headers{
+	font-family: Arial, sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+	
+	text-align: center;
+	
+	color: white;
+	background-color: #000033;
+	background-image: none;
+	background-repeat: no-repeat;
+
+	border: none;
+
+	height: 30px;
+	margin: 0px;
+	padding: 1px 3px 1px 3px;
+}
+
+thead th.wicket_orderUp{
+	font-family: Arial, sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+	font-style: italic;
+
+	text-align: center;
+
+	color: black;
+	background-color: white;
+	background-image: none;
+	background-repeat: no-repeat;
+
+	border: none;
+
+	margin: 0px;
+	padding: 0px;
+}
+
+thead th.wicket_orderNone a{
+	font-family: Arial, sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+	
+	text-align: center;
+	
+	color: white;
+	background-color: #000033;
+	background-image: none;
+	background-repeat: no-repeat;
+
+	border: none;
+
+	height: 30px;
+	margin: 0px;
+	padding: 1px 3px 1px 3px;
+}
+
+thead tr.filters-tr{
+	font-family: Arial, sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+	
+	color: black;
+	background-color: white;
+	background-image: none;
+	background-repeat: no-repeat;
+
+	border: none;
+
+	height: 25px;
+	margin: 0px;
+	padding: 0px;
+}
+
+thead td.filter-td {
+	color: black;
+	background-color: white;
+	background-image: none;
+	background-repeat: no-repeat;
+
+	border: none;
+	
+	width: 50px;
+	height: 25px;
+	margin: 0px;
+	padding: 0px;
+}
+
+/*=======================================================*/
+/*	Tables - body		 			 */
+/*=======================================================*/
+tbody tr.even{
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+
+	text-align: left;
+	vertical-align: middle;
+
+	color: black;
+	background-color: white;
+	background-image: none;
+	background-repeat: no-repeat;
+
+	border: none;
+
+	height: 25px;
+	margin: 0px;
+	padding: 0px;
+}
+
+tbody tr.odd{
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+
+	text-align: left;
+	vertical-align: middle;
+
+	color: black;
+	background-color: white;
+	background-image: none;
+	background-repeat: no-repeat;
+
+	border: none;
+
+	height: 25px;
+	margin: 0px;
+	padding: 0px;
+}
+
+/*=======================================================*/
+/*	Expiration Page					 */
+/*=======================================================*/
+table.expirationPage{
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+
+	text-align: center;
+	vertical-align: middle;
+
+	color: black;
+	background-color: white;
+	background-image: none;
+	background-repeat: no-repeat;
+
+	border-width: 6px;
+	border-style: solid;
+	border-color: #000033;	
+	border-spacing: 0px;
+                
+	margin: auto;
+	padding: 0px; 
+}
+
+table.expirationPage tr{
+	height: 30px;
+}
+
+/*=======================================================*/
+/*	Page Header					 */
+/*=======================================================*/
+table.outerHeaderBorder{
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+
+	text-align: left;
+	vertical-align: middle;
+
+	color: black;
+	background-color: white;
+	background-image: none;
+	background-repeat: no-repeat;
+
+	border-top: 0px;
+	border-right: 3px dimgray;
+	border-bottom: 0px;	
+	border-left: 2px gray;
+	border-style: solid;
+	border-spacing: 0px;
+	border-collapse: collapse;
+          
+	margin: auto;
+	padding: 0px; 
+	
+}
+
+table.headerBorder{
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+
+	text-align: right;
+	vertical-align: middle;
+
+	color: black;
+	background-color: transparent;
+	background-image: none;
+	background-repeat: no-repeat;
+
+	border: none;
+	border-spacing: 0px;
+	border-collapse: collapse;
+
+	width: 1024px;                                  
+    height: 150px;
+	margin: 0px 3px 0px 3px;
+	padding: 0px;
+}
+
+table.headerBorder td.headerLogo{	
+	font-family: Mufferaw, Arial, sans-serif;
+	font-size: 65px;
+
+	text-align: right;
+
+	color: black;
+	background-color: transparent;
+	background-image: url(../img/SpringLogo.png);;
+	background-repeat: no-repeat;
+
+	border: none;
+	border-collapse: collapse;
+
+	width: 150px;                                  
+    height: 150px;
+	margin: 0px;
+	padding: 0px;
+}
+
+table.headerBorder td.headerSpare{	
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+
+	text-align: right;
+
+	color: black;
+	background-color: transparent;
+	background-image: url(../img/Title.png);;
+	background-repeat: no-repeat;
+
+	border: none;
+	border-collapse: collapse;
+
+	width: 504px;
+	height: 150px;
+	margin: 0px;
+	padding: 0px;	
+}
+
+table.headerBorder td.headerLogin{
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+
+	text-align: right;
+
+	color: black;
+	background-color: transparent;
+	background-image: url(../img/grassLogin.png);
+	background-repeat: no-repeat;
+
+	border: none;
+	border-collapse: collapse;
+
+	width: 370px; 
+	height: 100px;
+	margin: 0px;
+	padding: 0px;	
+}
+
+/*=======================================================*/
+/*	Page Header - Login				 */
+/*=======================================================*/
+table.form {
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+
+	text-align: right;
+	display: block;
+
+	color: black;
+	background-color: transparent;
+	background-image: none;
+	background-repeat: no-repeat;
+
+	border: none;
+
+	width: 370px; 
+	height: 80px;
+	margin: 0px 0px 70px 0px;
+	padding: 0px;
+}
+
+table.form td.label {
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+
+	text-align: right;
+
+	color: black;
+	background-color: transparent;
+	background-image: none;
+	background-repeat: no-repeat;
+
+	border: none;
+
+	width: 270px; 
+	height: 15px;
+	margin: 0px;
+	padding: 0px;
+}
+
+table.form td.input{
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+
+	text-align: right;
+
+	color: black;
+	background-color: transparent;
+	background-image: none;
+	background-repeat: no-repeat;
+
+	border: none;
+
+	width: 100px; 
+	height: 15px;
+	margin: 0px;
+	padding: 0px;
+}
+
+table.form td.loginButton{
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+
+	text-align: center;
+
+	color: black;
+	background-color: transparent;
+	background-image: none;
+	background-repeat: no-repeat;
+
+	border: none;
+
+ 	width: 50px; 
+	height: 15px;
+	margin: 0px;
+	padding: 0px;
+}
+
+table.form td.registrationButton{
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+
+	text-align: center;
+
+	color: black;
+	background-color: transparent;
+	background-image: none;
+	background-repeat: no-repeat;
+
+	border: none;
+
+ 	width: 50px; 
+	height: 15px;
+	margin: 0px;
+	padding: 0px;
+}
+
+/*=======================================================*/
+/*	Page Header - Logged user			 */
+/*=======================================================*/
+table.loggedUser{
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+
+	text-align: right;
+	display: block;
+
+	color: black;
+	background-color: transparent;
+	background-image: none;
+	background-repeat: no-repeat;
+
+	border: none;
+ 
+	width: 370px; 
+	height: 60px;
+	margin: 0px 0px 90px 0px;
+	padding: 0px;
+}
+
+table.loggedUser td.label {
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+
+	text-align: right;
+
+	color: black;
+	background-color: transparent;
+	background-image: none;
+	background-repeat: no-repeat;
+
+	border: none;
+ 
+	width: 270px; 
+	height: 15px;
+	margin: 0px;
+	padding: 0px;
+}
+
+table.loggedUser td.nameLabel {
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+
+	text-align: left;
+
+	color: black;
+	background-color: transparent;
+	background-image: none;
+	background-repeat: no-repeat;
+
+	border: none;
+ 
+	width: 100px; 
+	height: 15px;
+	margin: 0px;
+	padding: 0px;
+}
+
+table.loggedUser td.logoutButton{
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+
+	text-align: right;
+
+	color: black;
+	background-color: transparent;
+	background-image: none;
+	background-repeat: no-repeat;
+
+	border: none;
+ 
+	width: 270px; 
+	height: 15px;
+	margin: 0px;
+	padding: 0px;
+}
+table.loggedUser td.userProfileLink{
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+
+	text-align: left;
+
+	color: black;
+	background-color: transparent;
+	background-image: none;
+	background-repeat: no-repeat;
+
+	border: none;
+ 
+	width: 100px; 
+	height: 15px;
+	margin: 0px;
+	padding: 0px;
+}
+
+
+/*=======================================================*/
+/*	Page horizontal navigation			 */
+/*=======================================================*/
+table.outerNavigationHorizontalPanel{
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+
+	text-align: center;
+	vertical-align: middle;
+
+	color: black;
+	background-color: white;
+	background-image: none;
+	background-repeat: no-repeat;
+
+	border-top: 0px;
+	border-right: 3px dimgray;
+	border-bottom: 0px;	
+	border-left: 2px gray;
+	border-style: solid;
+	border-collapse: collapse;
+                         
+	margin: auto;
+	padding: 0px; 
+	padding: 0px; 
+}
+
+table.navigationHorizontalPanel{
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+
+	text-align: center;
+	vertical-align: middle;
+
+	color: black;
+	background-color: white;
+	background-image: none; /*url(../img/menuBarInner.png);*/
+	background-repeat: no-repeat;
+
+	border: none;
+	border-spacing: 0px;
+	border-collapse: collapse;
+         
+	width: 1024px;
+	height: 50px;                 
+	margin: 0px 3px 3px 3px;
+	padding: 0px; 
+}
+
+table.navigationHorizontalPanel td.input{
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+
+	text-align: left;
+	vertical-align: middle;
+
+	color: black;
+	background-color: transparent;
+	background-image: none;
+	background-repeat: no-repeat;
+
+	border: none;
+
+	width: 300px;
+	margin: 0px;
+	padding: 2px;	
+}
+
+table.navigationHorizontalPanel input.searchButton {
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+
+	text-align: left;
+	vertical-align: middle;
+
+	color: black;
+	background-color: transparent;
+	background-image: url(../img/search.gif);
+	background-repeat: no-repeat;
+
+	border: none;
+
+	width: 25px;
+	height: 25px;
+	margin: 0px;
+	padding: 0px;
+	
+	cursor:pointer;
+}
+
+table.navigationHorizontalPanel td.downHr{
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+
+	text-align: center;
+
+	color: black;
+	background-color: transparent;
+	background-image: none;
+	background-repeat: no-repeat;
+
+	border: none;
+               
+	margin: 0px;
+	padding: 0px; 
+}
+
+table.navigationHorizontalPanel td.navigation{
+	font-family:Arial,Verdana,Helvitica,sans-serif;
+	font-size:11px;
+	font-weight:bold;
+	text-transform:uppercase;
+	text-align: center;
+	vertical-align: middle;
+
+	color: black;
+	background:white repeat-x top left;
+	background-image:none;
+	
+	border: none;
+	border-collapse: collapse;
+	
+	width: 12.5%; 
+	height:42px;
+	margin: 0px;
+	padding:0px;
+
+}
+
+table.navigationHorizontalPanel td.navigation a{
+	text-align: center;
+	vertical-align: middle;
+	
+	display: block;
+	color: white;
+	background-color:#000033;
+	text-decoration:none;
+	border-collapse: collapse;
+
+	height: 28px;
+	padding:14px 10px 0px 10px;
+}
+
+table.navigationHorizontalPanel td.navigation a:hover,table.navigationHorizontalPanel td.navigation a.current{
+	color: black;
+	background:white none no-repeat top center;
+}
+
+/*=======================================================*/
+/*	Page content			 		 */
+/*=======================================================*/
+table.centerWrapper{
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+
+	text-align: left;
+	vertical-align: top;
+
+	color: black;
+	background-color: white;
+	background-image: none;
+	background-repeat: no-repeat;
+
+	border-top: 0px;
+	border-right: 3px dimgray;
+	border-bottom: 0px;	
+	border-left: 2px gray;	
+	border-style: solid;
+	border-spacing: 0px;
+	border-collapse: collapse;
+         
+	width: 1024px;                      
+	margin: auto;
+	padding: 0px;
+}
+
+table.centerWrapper td{ 	
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+
+	text-align: left;
+	vertical-align: top;
+	
+	border-spacing: 0px;
+	border-collapse: collapse;
+}
+
+/*=======================================================*/
+/*	Page content - news		 		 */
+/*=======================================================*/
+table.coreMainPage {
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+
+	text-align: left;
+	vertical-align: middle;
+
+	color: black;
+	background-color: white;
+	background-image: none;
+	background-repeat: no-repeat;
+
+	border: none;
+     
+	width: 1024px;           
+	margin: auto;
+	padding: 0px; 
+}
+
+table.interCoreMainPage{
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+
+	text-align: left;
+	vertical-align: middle;
+
+	color: black;
+	background-color: transparent;
+	background-image: none;
+	background-repeat: no-repeat;
+
+	border: none;
+     
+	width: 100%;           
+	margin: 0px;
+	padding: 0px; 
+}
+
+table.newsList{
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+
+	text-align: left;
+	vertical-align: middle;
+
+	color: black;
+	background-color: white;
+	background-image: none;
+	background-repeat: no-repeat;
+
+	border-width: 1px;
+	border-style: solid;
+	border-color: black;
+	border-spacing: 0px;
+	border-collapse: collapse;
+
+	width: 700px; 
+	height: 100px;
+	margin: 1px;
+	padding: 0px;
+}
+
+table.newsList td{
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+
+	text-align: left;
+
+	color: black;
+	background-color: white;
+	background-image: none; /* url(../img/workIcon.png);*/
+	background-repeat: no-repeat;
+
+	border: none;
+	border-collapse: collapse;
+
+	width: 100px; 
+	height: 100px;
+	margin: 0px;
+	padding: 0px;
+}
+
+table.newsList td.newList{
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+
+	text-align: left;
+
+	color: black;
+	background-color: white;
+	background-image: none;
+	background-repeat: no-repeat;
+
+	border: none;
+	border-collapse: collapse;
+
+	width: 600px;
+	height: 100px;
+	margin: 0px;
+	padding: 0px;
+}
+
+/*=======================================================*/
+/*	Page content - news	- columns	 		 */
+/*=======================================================*/
+table.newsList td.name{
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+
+	text-align: left;
+	vertical-align: middle;
+
+	color: black;
+	background-color: white;
+	background-image: none;
+	background-repeat: no-repeat;
+
+	border: none;
+	border-collapse: collapse;
+
+	width: 200px; 
+	height: 25px;
+	margin: 0px;
+	padding: 2px 5px 2px 5px;
+}
+
+table.newsList td.owner{
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+
+	text-align: left;
+	vertical-align: middle;
+
+	color: black;
+	background-color: white;
+	background-image: none;
+	background-repeat: no-repeat;
+
+	border: none;
+	border-collapse: collapse;
+
+	width: 100px; 
+	height: 25px;
+	margin: 0px;
+	padding: 2px 5px 2px 5px;
+}
+
+table.newsList td.type{
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+
+	text-align: left;
+	vertical-align: middle;
+
+	color: black;
+	background-color: white;
+	background-image: none;
+	background-repeat: no-repeat;
+
+	border: none;
+	border-collapse: collapse;
+
+	width: 200px; 
+	height: 25px;
+	margin: 0px;
+	padding: 2px 5px 2px 5px;
+}
+
+table.newsList td.town{
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+
+	text-align: left;
+	vertical-align: middle;
+
+	color: black;
+	background-color: white;
+	background-image: none;
+	background-repeat: no-repeat;
+
+	border: none;
+	border-collapse: collapse;
+
+	width: 100px; 
+	height: 25px;
+	margin: 0px;
+	padding: 2px 5px 2px 5px;
+}
+
+table.newsList td.price{
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+
+	text-align: left;
+	vertical-align: middle;
+
+	color: black;
+	background-color: white;
+	background-image: none;
+	background-repeat: no-repeat;
+
+	border: none;
+	border-collapse: collapse;
+
+	width: 100px; 
+	height: 25px;
+	margin: 0px;
+	padding: 2px 5px 2px 5px;
+}
+
+table.newsList td.theme{
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+
+	text-align: left;
+	vertical-align: middle;
+
+	color: black;
+	background-color: white;
+	background-image: none;
+	background-repeat: no-repeat;
+
+	border: none;
+	border-collapse: collapse;
+
+	width: 100px; 
+	height: 25px;
+	margin: 0px;
+	padding: 2px 5px 2px 5px;
+}
+
+table.newsList td.thread{
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+
+	text-align: left;
+	vertical-align: middle;
+
+	color: black;
+	background-color: white;
+	background-image: none;
+	background-repeat: no-repeat;
+
+	border: none;
+	border-collapse: collapse;
+
+	width: 100px; 
+	height: 25px;
+	margin: 0px;
+	padding: 2px 5px 2px 5px;
+}
+
+table.newsList td.content{
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+
+	text-align: left;
+	vertical-align: middle;
+
+	color: black;
+	background-color: white;
+	background-image: none;
+	background-repeat: no-repeat;
+
+	border: none;
+	border-collapse: collapse;
+
+	width: 200px; 
+	height: 25px;
+	margin: 0px;
+	padding: 2px 5px 2px 5px;
+}
+
+table.newsList td.detail{
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+
+	text-align: right;
+	vertical-align: middle;
+
+	color: black;
+	background-color: white;
+	background-image: none;
+	background-repeat: no-repeat;
+
+	border: none;
+	border-collapse: collapse;
+
+	width: 100px; 
+	height: 25px;
+	margin: 0px;
+	padding: 2px 5px 2px 5px;
+}
+
+/*=======================================================*/
+/*	Page content - news	- icons	 		 */
+/*=======================================================*/
+table.newsList td.jobIcon{
+	background-image: url(../img/workIcon.png);
+	background-repeat: no-repeat;
+}
+
+table.newsList td.commentIcon{
+	background-image: url(../img/forumIcon.png);
+	background-repeat: no-repeat;
+}
+
+table.newsList td.eventIcon{
+	background-image: url(../img/eventIcon.png);
+	background-repeat: no-repeat;
+}
+
+table.newsList td.livingIcon{
+	background-image: url(../img/livingIcon.png);
+	background-repeat: no-repeat;
+}
+
+table.newsList td.educationIcon{
+	background-image: url(../img/educationIcon.png);
+	background-repeat: no-repeat;
+}
+
+table.newsList td.informationIcon{
+	background-image: url(../img/infoIcon.png);
+	background-repeat: no-repeat;
+}
+
+table.newsList td.healthAidIcon{
+	background-image: url(../img/toolsIcon.png);
+	background-repeat: no-repeat;
+}
+
+table.newsList td.dayCareIcon{
+	background-image: url(../img/careIcon.png);
+	background-repeat: no-repeat;
+}
+
+/*=======================================================*/
+/*	Page content - vertical navigation		 */
+/*=======================================================*/
+table.outerNavigationPanelBorder{
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+
+	text-align: left;
+	vertical-align: top;
+
+	color: black;
+	background-color: white;
+	background-image: none; /*url(../img/submenuInner.png);*/
+	background-repeat: no-repeat;
+
+	border: none;
+	border-collapse: collapse;
+  
+	width: 204px;
+	height: 300px;                              
+	margin: 0px;/*auto?*/
+	padding: 0px;
+}
+
+table.outerNavigationPanelBorder td{
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+
+	text-align: left;
+	vertical-align: top;
+
+	color: black;
+	background-color: transparent;
+	background-image: none;
+	background-repeat: no-repeat;
+
+	border: none;
+	border-collapse: collapse;
+                               
+	margin: 0px;/*auto?*/
+	padding: 0px;
+}
+
+table.interNavigationPanel{
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+
+	text-align: left;
+	vertical-align: top;
+
+	color: black;
+	background-color: transparent;
+	background-image: none;
+	background-repeat: no-repeat;
+
+	border: none;
+	border-collapse: collapse;
+  
+	width: 100%;                            
+	margin: 0px;
+	padding: 0px;
+}
+
+table.interNavigationPanel td{
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+
+	text-align: left;
+	vertical-align: middle;
+
+	color: black;
+	background-color: white;
+	background-image: none; 
+	background-repeat: no-repeat;
+
+	border: none;
+  
+	height: 20px;                             
+	margin: 0px;
+	padding: 0px;
+}
+
+table.interNavigationPanel td a{
+	font-family: Arial, sans-serif;
+
+	display: block;
+	text-align: left;
+	vertical-align: top;	
+	
+	color: black;
+	background-color: white;
+	background-image: none; 
+	background-repeat: repeat-x;
+
+	border-bottom: 1px black;
+	border-top: 1px black;
+	border-right: 1px black;	
+	border-left: 1px black;
+	border-style: solid;
+  
+    width: 204px;
+	height: 20px;                             
+	margin: 0px;
+	padding: 8px 0px 8px 5px;
+}
+
+table.interNavigationPanel td a:hover, table.interNavigationPanel td a.current{
+	font-family: Arial, sans-serif;
+
+	display: block;
+	text-align: left;
+	vertical-align: top;
+
+	color: white;
+	background-color: #000033;
+	background-image: none; 
+	background-repeat: repeat-x;
+
+	border-bottom: 1px black;
+	border-top: 1px black;
+	border-right: 1px black;	
+	border-left: 1px black;
+	border-style: solid;
+
+	width: 204px;
+	height: 20px;                             
+	margin: 0px;
+	padding: 8px 0px 8px 5px;
+}
+
+/*=======================================================*/
+/*	Page content - content wrapper 		 */
+/*=======================================================*/
+table.outerMainContentBorder{
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+
+	text-align: left;
+	vertical-align: top;
+
+	color: black;
+	background-color: white;
+	background-image: none;
+	background-repeat: no-repeat;
+
+	border: none;	
+	border-collapse: collapse;
+
+	width: 100%;                                 
+	margin: 0px;
+	padding: 0px;
+}
+
+table.mainContent{
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+
+	text-align: right;
+
+	color: black;
+	background-color: white;
+	background-image: none;
+	background-repeat: no-repeat;
+
+	border: none;
+	border-collapse: collapse;
+
+	width : 100%; /*100%;*/ 
+	margin: 0px;
+	padding: 0px;	
+}
+
+/*=======================================================*/
+/*	Page content - search result	 		 */
+/*=======================================================*/
+table.searchResultList{
+	border-collapse: collapse;
+	
+	width : 100%; 
+	margin: 0px;
+	padding: 0px;	
+}
+	
+table.searchResultList tr{
+	width:100%;	
+}
+
+table.searchResultList td{
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+
+	text-align: center;
+	
+
+	color: black;
+	background-color: white;
+	background-image: none;
+	background-repeat: no-repeat;
+
+	border-width: 1px 0px 1px 0px;
+	border-style: solid;
+	border-color: black;
+
+	width : 33%;
+	margin: 0px;
+	padding: 2px 2px 2px 2px;	
+}
+
+/*=======================================================*/
+/*	Page content - style 		 */
+/*=======================================================*/	
+table.style{
+	text-align: center;
+	width: 100%;
+}
+
+table.style td.style{
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+
+	text-align: center;
+	
+
+	color: black;
+	background-color: white;
+	background-image: none;
+	background-repeat: no-repeat;
+
+	border-width: 1px 0px 1px 0px;
+	border-style: solid;
+	border-color: black;
+
+	width : 33%;
+	margin: 0px;
+	padding: 2px 2px 2px 2px;	
+}
+
+table.style td.styleDescription{
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+
+	text-align: center;
+	
+
+	color: black;
+	background-color: white;
+	background-image: none;
+	background-repeat: no-repeat;
+
+	border-width: 1px 0px 1px 0px;
+	border-style: solid;
+	border-color: black;
+
+	width : 33%;
+	margin: 0px;
+	padding: 2px 2px 2px 2px;	
+}
+	
+/*=======================================================*/
+/*	Page content - quick navigation	 		 */
+/*=======================================================*/
+table.whereIam {
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+
+	text-align: left;
+	vertical-align: middle;
+
+	color: black;
+	background-color: white;
+	background-image: none; /*url(../img/mainPageNavigation.png);*/
+	background-repeat: no-repeat;
+
+	border-width: 1px;
+	border-style: solid;
+	border-color: black;	
+  
+	width: 100%; /*820px;*/                              
+	margin: 0px;
+	padding: 0px;
+}
+
+table.whereIam td{
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+
+	text-align: left;
+	vertical-align: middle;
+
+	color: black;
+	background-color: white;
+	
+	border: none;
+	
+	margin: 2px;
+	padding: 0px;
+}
+
+/*=======================================================*/
+/*	Page content - content		 		 */
+/*=======================================================*/
+table.pageContent{
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+
+	text-align: left;
+	vertical-align: top;
+
+	color: black;
+	background-color: white;
+	background-image: none;
+	background-repeat: no-repeat;
+
+	border: none;	
+	border-collapse: collapse;
+  
+	width: 820px;  /*820px;100%;*/                              
+	margin: 0px;
+	padding: 0px;
+}
+
+table.pageForumContent{
+	width: 100%;  /*820px;100%;*/                              
+	margin: 0px;
+	padding: 0px;
+}
+
+/*=======================================================*/
+/*	Page content - content - Details	 		 */
+/*=======================================================*/
+table.jobList{
+	border: none;
+	border-collapse: collapse;
+
+	margin: 0px;
+	padding: 0px;
+}
+
+table.registration{
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+
+	text-align: left;
+	vertical-align: middle;
+
+	color: black;
+	background-color: white;
+	background-image: none;
+	background-repeat: no-repeat;
+
+	border: none;
+	border-collapse: collapse;
+
+	width: 1024px;
+	margin: 0px;
+}
+
+table.registration td{
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+	
+	text-align: left;
+	vertical-align: middle;
+	
+	color: black;
+	background-color: white;/*white;#FFCC66;*/
+	
+	border-width: 1px 0px 1px 0px;
+	border-style: solid;
+	border-color: black;
+	
+	width: 50%;
+	padding: 7px 7px 7px 30px;		
+}
+
+table.registration td.label{
+	text-align: right;
+	width: 50%;
+	padding: 7px 30px 7px 7px;
+}
+
+table.registration td.submit{
+	text-align: center;
+}
+
+table.detail{
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+
+	text-align: left;
+	vertical-align: middle;
+
+	color: black;
+	background-color: white;
+	background-image: none;
+	background-repeat: no-repeat;
+
+	border: none;
+	border-collapse: collapse;
+
+	width: 100%;
+	margin: 0px;
+}
+
+table.detail td{
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+	
+	text-align: left;
+	vertical-align: middle;
+	
+	color: black;
+	background-color: white;/*white;#FFCC66;*/
+	
+	border-width: 1px 0px 1px 0px;
+	border-style: solid;
+	border-color: black;
+	
+	padding: 7px 7px 7px 7px;		
+}
+
+/*=======================================================*/
+/*	Page content - content - Tables for lists	 		 */
+/*=======================================================*/
+
+table.dataTable {
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+
+	text-align: left;
+	vertical-align: middle;
+
+	color: black;
+	background-color: white;
+	background-image: none;
+	background-repeat: no-repeat;
+
+	border-width: 1px;
+	border-style: solid;
+	border-color: black;		
+	border-spacing: 0px;
+	border-collapse: collapse;
+
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+}
+
+table.dataTable td{
+	text-align: left;
+	vertical-align: middle;
+	
+	border-collapse: collapse;
+	
+	margin: 0px;
+	padding: 1px 10px 1px 10px;
+}
+
+/*=======================================================*/
+/*	Page content - content - Forum 		 */
+/*=======================================================*/
+
+table.themeList{
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+
+	text-align: left;
+	vertical-align: middle;
+	
+	color: black;
+	background-color: white;
+	background-image: url(../img/forum.png);
+	background-repeat: repeat-y;
+	
+	border-collapse: collapse;
+	border-width: 1px;
+	border-color: black;
+	border-style: solid;	
+		
+	width: 100%;
+	margin: 0px;
+	padding: 0px 0px 0px 0px;
+}
+
+table.themeList tr{
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+
+	text-align: left;
+	vertical-align: middle;
+
+	color: black;
+	background-color: transparent;
+	background-image: none;
+	background-repeat: no-repeat;
+
+	border-width: 1px;
+	border-color: black;
+	border-style: solid;		
+	
+	height: 65px; 
+	margin: 0px 0px 1px 0px;
+	padding: 0px 0px 0px 80px;
+
+}
+
+table.themeList td{
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+
+	text-align: left;
+	vertical-align: middle;
+
+	color: black;
+	background-color: transparent;
+	background-image: none;
+	background-repeat: no-repeat;
+
+	border-bottom: 1px;
+	border-color: black;
+	border-style: solid;	
+
+	height: 62px; 
+	margin: 0px 0px 1px 0px;
+	padding: 0px;
+}
+
+table.themeList td#threadName{
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+
+	text-align: left;
+	vertical-align: middle;
+
+	color: black;
+	background-color: transparent;
+	background-image: url(../img/forum.png);
+	background-repeat: no-repeat;
+
+	border: none;
+
+	width: 35%;
+	height: 62px; 
+	margin: 0px 0px 1px 0px;
+	padding: 0px 0px 0px 120px;
+}
+
+table.themeList td#threadData{
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+
+	text-align: center;
+	vertical-align: middle;
+
+	color: black;
+	background-color: transparent;
+	background-image: none;
+	background-repeat: no-repeat;
+
+	border: none;
+
+	width: 10%;
+	height: 62px; 
+	margin: 0px 0px 1px 0px;
+	padding: 0px;
+}
+
+
+table.themeList td#themeName{
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+
+	text-align: left;
+	vertical-align: middle;
+
+	color: black;
+	background-color: transparent;
+	background-image: url(../img/forum.png);
+	background-repeat: no-repeat;
+
+	border: none;
+
+	width: 80%;
+	height: 62px; 
+	margin: 0px 0px 1px 0px;
+	padding: 0px 0px 0px 120px;
+}
+
+table.themeList td#detail{
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+
+	text-align: center;
+	vertical-align: middle;
+
+	color: black;
+	background-color: transparent;
+	background-image: none;
+	background-repeat: no-repeat;
+
+	border: none;
+
+	width: 20%;
+	height: 62px; 
+	margin: 0px 0px 1px 0px;
+	padding: 0px;
+}
+
+table.addTheme{
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+
+	text-align: center;
+	vertical-align: middle;
+	
+	color: black;
+	background-color: white;
+	background-image: none;
+	background-repeat: no-repeat;
+	
+	border-width: 1px;
+	border-style: solid;
+	border-color: black;		
+	border-collapse: collapse;
+		
+	width: 100%;
+	height: 50px;
+	margin:  10px 0px 0px 0px;
+	padding: 0px 0px 0px 60px;
+}
+
+table.addTheme td{
+	text-align: center;
+	width: 50%;
+}
+
+table.addTheme td.heading{
+	text-align: center;
+	vertical-align: middle;
+	
+	border-width: 0px 0px 1px 0px;
+	border-style: solid;
+	border-color: black;		
+	border-collapse: collapse;
+	
+	height: 20px;
+}
+
+table.addTheme td.submit{
+	text-align: center;
+}
+
+table.pageContent td#addNewComment{
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+
+	text-align: left;
+	vertical-align: middle;
+	
+	color: black;
+	background-color: white;
+	background-image: url(../img/newComment.png);;
+	background-repeat: no-repeat;
+	
+	border-width: 1px;
+	border-style: solid;
+	border-color: black;		
+	border-collapse: collapse;
+		
+	width: 100%;
+	height: 50px;
+	margin:  10px 0px 0px 0px;
+	padding: 0px 0px 0px 60px;
+}
+
+/*=======================================================*/
+/*	Page content - content - Comments 		 */
+/*=======================================================*/
+table.commentList {
+	width: 100%;
+}
+
+table.commentItem {
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+
+	text-align: left;
+
+	color: black;
+	background-color: white;
+	background-image: none;
+	background-repeat: no-repeat;
+
+	border-width: 1px;
+	border-style: solid;
+	border-color: black;	
+	border-spacing: 0px;
+	border-collapse: collapse;
+
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+}
+
+table.commentItem td{
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+
+	text-align: left;
+
+	color: black;
+	background-color: white;
+	background-image: none;
+	background-repeat: no-repeat;
+
+	border: none;
+	border-collapse: collapse;
+
+	margin: 0px;
+	padding: 0px 5px 0px 5px;
+}
+
+table.commentItem td.commentName{
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+
+	text-align: left;
+
+	color: black;
+	background-color: white;
+	background-image: none;
+	background-repeat: no-repeat;
+
+	border: none;
+	border-collapse: collapse;
+
+	margin: 0px;
+	padding: 12px;
+}
+
+table.commentItem td.commentCreateDate{
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+
+	text-align: right;
+
+	color: black;
+	background-color: white;
+	background-image: none;
+	background-repeat: no-repeat;
+
+	border: none;
+	border-collapse: collapse;
+
+	margin: 0px;
+	padding: 0px 5px 0px 5px;
+}
+
+/*=======================================================*/
+/*	Page content - content - Events	 		 */
+/*=======================================================*/
+img.eventPicture{
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+
+	text-align: right;
+
+	color: black;
+	background-color: white;
+	background-image: none;
+	background-repeat: no-repeat;
+
+	border-width: 1px;
+	border-style: solid;
+	border-color: black;	
+	border-spacing: 0px;
+
+	max-width: 450px;
+	max-height: 450px;
+	margin: 0px;
+	padding: 0px;
+}
+
+/*=======================================================*/
+/*	Page content - content - Filter buttons		 */
+/*=======================================================*/
+input.clear {
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+
+	text-align: left;
+
+	color: black;
+	background-color: white;
+	background-image: url(../img/FilterCancel.png);
+	background-repeat: no-repeat;
+
+	border: none;
+
+	width: 25px;
+	height: 25px;
+	margin: 0px;
+	padding: 0px;
+
+	cursor:pointer;
+}
+
+input.go {
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+
+	text-align: left;
+
+	color: black;
+	background-color: white;
+	background-image: url(../img/Filter.png);
+	background-repeat: no-repeat;
+
+	border: none;
+
+	width: 25px;
+	height: 25px;
+	margin: 0px;
+	padding: 0px;
+
+	cursor:pointer;
+}
+
+/*=======================================================*/
+/*	Page content - content - Headings			 */
+/*=======================================================*/
+div.heading1{
+	font-family: Arial, sans-serif;
+	font-size: 20px;
+	font-weight: bold;
+	
+	text-align: center;
+	
+	color: black;
+	background-color: white;
+	background-image: none;
+	background-repeat: no-repeat;
+
+	border: none;
+
+	height: 30px;
+	margin: 0px;
+	padding: 10px 0px 10px 0px;
+}
+
+div.heading2{
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	
+	text-align: left;
+	
+	color: black;
+	background-color: white;
+	background-image: none;
+	background-repeat: no-repeat;
+
+	border: none;
+
+	margin: 0px;
+	padding: 0px 0px 0px 10px;
+}
+
+/*=======================================================*/
+/*	Page content - content - Links			 */
+/*=======================================================*/
+a:link {
+	text-decoration: none;
+	
+	color: black;
+}
+
+a:visited {
+	text-decoration: none;
+    	
+	color: black;
+}
+
+a:hover {
+	text-decoration: none;
+    	
+	color: darkgray;
+}
+
+/*=======================================================*/
+/*	Unknown						 */
+/*=======================================================*/
+hr {
+	width: 100%;
+	height: 1px;
+
+	background-color: white;
+	color: black;			
+}
+
+div.navigatorLabel{
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+
+	text-align: left;
+
+	color: black;
+	background-color: white;
+	background-image: none;
+	background-repeat: no-repeat;
+
+	border: none;
+
+	margin: 0px;
+	padding: 0px;
+}
+
+div.navigator{
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+
+	text-align: left;
+
+	color: black;
+	background-color: white;
+	background-image: none;
+	background-repeat: no-repeat;
+
+	border: none;
+
+	margin: 0px;
+	padding: 0px;
+}

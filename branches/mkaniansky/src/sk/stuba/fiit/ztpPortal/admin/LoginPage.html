@@ -1,0 +1,49 @@
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+<title>Login</title>
+<link rel="stylesheet" type="text/css" href="style/adminStyle.css" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 
+</head>
+<body>
+
+	<div align="center"><font color="blue">
+	<h2>Prihlásenie do administrácie</h2>
+	</font></div>
+	<form wicket:id="loginForm">
+	<table class="loginForm">
+		<tr>
+			<td>
+				<br>
+			</td>
+		</tr>
+		<tr>
+			<td class="inputLabel" style="width: 50%"><label wicket:id="loginLabel"></label></td>
+			<td align="left" class="input"><input type="text"
+				wicket:id="login" id="login" size="25" /> 
+			</td>
+			<td>
+			<span wicket:id="loginFeedback" class="error"></span>
+			</td>
+		</tr>
+		<tr>
+			<td width="40%" class="inputLabel"><label wicket:id="passwordLabel"></label></td>
+			<td align="left" class="input"><input type="password"
+				wicket:id="password" id="password" size="25" /> 
+			</td>
+			<td>
+			<span wicket:id="passwordFeedback" class="error"></span>
+			</td>
+		</tr>
+		<tr class="buttons">
+			<td align="center" colspan="2"><input type="submit"
+				wicket:id="submit" value="Prihlásiť" /> <span
+				wicket:id="submitFeedback" class="error"></span></td>
+		</tr>
+	</table>
+	</form>
+	<br></br>
+	<br></br>
+
+</body>
+</html>

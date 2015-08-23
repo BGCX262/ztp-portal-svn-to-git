@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="sk.stuba.fiit.ztpPortal.databaseModel.Job" table="JOB">
+       <id column="ID" name="id" unsaved-value="null">
+           <generator class="native"/>
+       </id>
+
+	   <property column="START_DATE" name="startDate" type="date"/>
+	   <property column="JOB_SPECIF" name="specification"/>
+	   <property column="HOUR_PAYMENT" name="hourPayment"/>
+	   <property column="WORK_DURATION" name="workDuration"/>
+	   <property column="STATE" name="state"/>
+	   <property column="ACTIVE" name="active"/>
+	   <property column="IMPORT_DATE" name="creationDate" type="date"/>
+	   <property column="CHANGE_DATE" name="changeDate" type="date"/>
+	   <property column="CMS_CONTENT" name="cmsContent" />
+	   <property column="TOWN" name="town" />
+	   
+	   <many-to-one column="TYPE_OF_ADVERT" name="advertType" lazy="false"/>
+	   <many-to-one column="COUNTY" name="county" lazy="false"/>
+	   <many-to-one column="SECTOR" name="jobSector" lazy="false"/>
+	   <many-to-one column="CONTRACT_TYPE" name="contract" lazy="false"/>
+	   
+	   <property column="URLLINK" name="urlLink"/>
+       <many-to-one column="creator_id" name="creator" lazy="false"/>
+       
+	</class>
+	
+</hibernate-mapping>

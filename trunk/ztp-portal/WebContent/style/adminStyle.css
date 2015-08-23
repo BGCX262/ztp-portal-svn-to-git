@@ -1,0 +1,128 @@
+@CHARSET "UTF-8";
+
+body {
+    margin : 0; padding : 0;
+    font-family : georgia, times, serif;   
+    font-size : 15px;
+}
+div {                          
+    margin : 0; padding : 0;   
+}                              
+     
+hr {
+	width: 100%;
+	height: 5px;
+}
+
+table.loginForm{
+	border-width: 1px 1px 1px 1px;
+	border-style: solid;
+	border-color: red;
+	horizontal-align: center;
+	align: center;
+	font-weight: bold; 
+	font-size: 12pt;
+	background-color: #FFCC00;
+	margin-left: auto; 
+	margin-right: auto;
+}
+
+table.loginForm td.inputLabel {
+    font-size: 12pt;
+    font-weight: bold; 
+    text-align: right;
+}
+
+table.loginForm td.input {
+    font-size: 12pt;
+    font-weight: bold; 
+    text-align: left;
+}
+
+table.adminHeader {    
+	border-style: solid;
+	border-width: 1px 1px 1px 1px;                                 
+    width : 1024px;                                  
+    height : 100px;
+    cellpadding: 0px;
+	border-spacing: 0px;                              
+}
+
+table.adminHeader tr.mainHeader{
+	background-color: #FFCC00;
+	height: 80%;
+}
+
+table.adminHeader td.profileNameInfo{
+	border-style: solid;
+	border-width: 1px 1px 1px 1px;
+	width : 85%;
+	height: 20%;
+}
+
+table.adminHeader td.logoutLink{
+	border-style: solid;
+	border-width: 1px 1px 1px 1px;
+	text-align: center;
+	width : 15%;
+	height: 20%;
+}
+
+hr {
+  border: 1px;
+  height: 1px;
+  color: black;
+  background-color: black;
+}
+
+table.adminNavigation {
+	border-style: solid;
+	border-width: 1px 1px 1px 1px;
+	width: 95%;
+	background-color: #FFCC00;                                 
+}
+
+table.main{
+	width: 1024px;
+	min-height: 800px;
+	cellpadding: 0px;
+	cellspacing: 0px;
+}
+
+table.main td{ 
+	vertical-align: top;
+}
+
+table.main td.navigationPanel{
+	width : 20%;
+}
+
+table.main td.contentPanel{
+	width : 80%;
+}
+
+table.mainContent{
+	vertical-align: top;
+	border-style: solid;
+	border-width: 1px 1px 1px 1px;
+	width : 95%;
+}
+table.mainContent td{
+	vertical-align: top;
+}
+
+table.cmsContent{
+	text-align: center;
+	
+}
+
+table.userDetail tr.inputRow{
+	height: 25px;
+}
+
+table.userDetail tr.infoRow{
+	height: 25px;
+	text-align: center;
+	font-weight: bold;
+}
+               

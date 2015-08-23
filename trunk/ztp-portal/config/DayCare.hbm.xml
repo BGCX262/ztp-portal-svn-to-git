@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="sk.stuba.fiit.ztpPortal.databaseModel.DayCare" table="DAY_CARE" dynamic-update="true">
+    <meta attribute="implement-equals">true</meta>
+    
+       <id column="ID" name="id" unsaved-value="null">
+           <generator class="native"/>
+       </id>
+	   <property column="TOWN" name="town" />
+	   <property column="DESCRIPTION" name="description" />
+	   <property column="CREATION_DATE" name="creationDate" type="date"/>
+	   <property column="CHANGE_DATE" name="changeDate" type="date"/>
+	   <property column="START_DATE" name="startDate" type="date"/>
+	   <property column="END_DATE" name="endDate" type="date"/>
+	   <property column="ACTIVE" name="active"/>
+	   <property column="STATE" name="state"/>
+	   <property column="SHORT_DESC" name="shortDesc"/>
+	   
+	   <many-to-one column="TYPE_OF_ADVERT" name="advertType" lazy="false"/>
+	   <many-to-one column="HANDICAP_TYPE" name="handicapType" lazy="false"/>
+	   <many-to-one column="COUNTY" name="county" lazy="false"/>	
+       <many-to-one column="user_id" name="creator" lazy="false"/>
+	</class>
+	
+</hibernate-mapping>

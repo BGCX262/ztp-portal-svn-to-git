@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="sk.stuba.fiit.ztpPortal.databaseModel.Living" table="LIVINGS">
+       <id column="ID" name="id" unsaved-value="null">
+           <generator class="native"/>
+       </id>
+
+	   <property column="DATE_LIVING" name="livingDate" type="date"/>
+	   <property column="ROOMS" name="roomCount"/>
+	   <property column="SIZE" name="size"/>
+	   <property column="PRICE" name="price"/>
+	   <property column="NOTE" name="note"/>
+	   <property column="STATE" name="state"/>
+	   <property column="ACTIVE" name="active"/>
+	   <property column="IMPORT_DATE" name="createDate" type="date"/>
+	   <property column="CHANGE_DATE" name="changeDate" type="date"/>
+	   <property column="ADDRESS" name="address" />
+	   <property column="TOWN" name="town" />
+	   
+	   <many-to-one column="REGION" name="county" lazy="false"/>
+	   <many-to-one column="TYPE_OF_LIVING" name="livingType" lazy="false"/>
+	   <many-to-one column="TYPE_OF_STUFF" name="stuffType" lazy="false"/>
+       <many-to-one column="USER_ID" name="owner" lazy="false"/>
+       
+	</class>
+	
+</hibernate-mapping>

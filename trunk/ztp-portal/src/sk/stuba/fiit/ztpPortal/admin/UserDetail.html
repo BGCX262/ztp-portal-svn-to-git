@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>.:Administrácia:. Detail používateľa</title>
+<link rel="stylesheet" type="text/css" href="style/adminStyle.css" />
+</head>
+<body>
+
+<table class="adminHeader">
+	<tr class="mainHeader">
+		<td colspan="2">Administrácia portálu</td>
+	</tr>
+	<tr>
+		<td class="profileNameInfo"><label wicket:id="profileNameInfo"></label></td>
+		<td class="logoutLink"><a wicket:id="logoutLink">Odhlásenie</a></td>
+	</tr>
+</table>
+<br>
+
+<span wicket:id="feedback">feedbackmessages will be put here</span>
+
+<table class="main">
+	<tr>
+		<td class="navigationPanel">
+			<div wicket:id="panel">this gets replaced</div>
+		</td>
+		<td class="contentPanel">
+		<table class="mainContent">
+			<tr>
+				<td>
+
+				<form wicket:id="registrationForm">
+
+				<table class="userDetail" align="center">
+
+					<tr class="infoRow">
+						<td>Údaje o používateľovi</td>
+					</tr>
+					
+					<tr class="inputRow">
+						<td><label wicket:id="nameLabel"></label></td>
+						<td><input type="text" wicket:id="name" id="name" /></td>
+					</tr>
+
+					<tr class="inputRow">
+						<td><label wicket:id="surnameLabel"></label></td>
+						<td><input type="text" wicket:id="surname" id="surname" /></td>
+					</tr>
+
+					<tr class="inputRow">
+						<td><label wicket:id="loginLabel"></label></td>
+						<td><input type="text" wicket:id="login" id="login /></td>
+					</tr>
+
+					<tr class="inputRow">
+						<td><label wicket:id="emailLabel"></label></td>
+						<td><input type="text" wicket:id="email" id="email" /></td>
+					</tr>
+
+					<tr class="inputRow">
+						<td><label wicket:id="townLabel"></label></td>
+						<td><select wicket:id="town">
+						</select></td>
+					</tr>
+
+					<tr class="inputRow">
+						<td><label wicket:id="handicapTypeLabel"></label></td>
+						<td><select wicket:id="handicapType">
+						</select></td>
+					</tr>
+
+					<tr class="inputRow">
+						<td><label wicket:id="registrationDateLabel"></label></td>
+						<td><label wicket:id="userRegistrationDateLabel"></label></td>
+					</tr>
+
+					<tr class="inputRow">
+						<td><label wicket:id="lastChangeDateLabel"></label></td>
+						<td><label wicket:id="userLastChangeDateLabel"></label></td>
+					</tr>
+
+					<tr class="infoRow">
+						<td>Nastavenia</td>
+					</tr>
+
+					<tr class="inputRow">
+						<td><label wicket:id="statusLabel"></label></td>
+						<td><input type="checkbox" wicket:id="status" /></td>
+					</tr>
+
+					<tr class="inputRow">
+						<td><label wicket:id="adminLabel"></label></td>
+						<td><input type="checkbox" wicket:id="admin" /></td>
+					</tr>
+
+					<tr class="infoRow">
+						<td>Zmena hesla</td>
+					</tr>
+
+					<tr class="inputRow">
+						<td><label wicket:id="passwordLabel"></label></td>
+						<td><input type="password" wicket:id="password" id="password" /></td>
+					</tr>
+
+					<tr class="inputRow">
+						<td><label wicket:id="passwordAgainLabel"></label></td>
+						<td><input type="password" wicket:id="passwordAgain"
+							id="passwordAgain" /></td>
+					</tr>
+
+					<tr>
+						<td colspan="2"><input type="submit" wicket:id="submit"
+							value="Uložiť" /></td>
+					</tr>
+				</table>
+
+				</form>
+				</td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+</table>
+
+</body>
+</html>

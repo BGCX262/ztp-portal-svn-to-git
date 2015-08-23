@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="sk.stuba.fiit.ztpPortal.databaseModel.Event" table="EVENTS">
+       <id column="ID" name="id" unsaved-value="null">
+           <generator class="native"/>
+       </id>
+
+	   <property column="START_DATE" name="startDate" type="date"/>
+	   <property column="END_DATE" name="endDate" type="date"/>
+	   <property column="EVENTS_LENGTH" name="lenght"/>
+	   <property column="GUEST_COUNT" name="guestCount"/>
+	   <property column="NAME" name="name"/>
+	   <property column="NOTES" name="note"/>
+	   <property column="STATE" name="state"/>
+	   <property column="ACTIVE" name="active"/>
+	   <property column="IMPORT_DATE" name="createDate" type="date"/>
+	   <property column="CHANGE_DATE" name="changeDate" type="date"/>
+	   <property column="ADDRESS" name="address" />
+	   
+	   <many-to-one column="TOWN" name="town" lazy="false"/>
+	   <many-to-one column="TYPE" name="type" lazy="false"/>
+       <many-to-one column="USER_ID" name="owner" lazy="false"/>
+       
+	</class>
+	
+</hibernate-mapping>

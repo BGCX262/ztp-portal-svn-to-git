@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<wicket:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>ZTP Portál - Vaša cesta k informáciám</title>
+</wicket:head>
+<body>
+			<table class="outerHeaderBorder">
+	<tr>
+		<td>
+		<table class="headerBorder">
+			<tr>
+				<td rowspan="2" class="headerLogo"></td>
+				<td rowspan="2" class="headerSpare"></td>
+				<td class="headerLogin">
+				<form wicket:id="loginForm">
+				<table id="loginForm" class="form">
+					<tr class="loginFormName">
+						<td class="label"><label wicket:id="headerLoginLabel"></label></td>
+
+						<td class="input" colspan="2"><input type="text"
+							wicket:id="login" id="login" /></td>
+					</tr>
+					<tr>
+						<td class="label"><label wicket:id="headerPasswordLabel"></label></td>
+
+						<td class="input" colspan="2"><input type="password"
+							wicket:id="password" id="password" /></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td class="loginButton"><input type="submit"
+							wicket:id="doLoginButton" value="Prihlásiť" /></td>
+						<td class="registrationButton"><input type="submit"
+							wicket:id="registrationButton" value="Registrovať" /></td>
+					</tr>
+				</table>
+				</form>
+
+				<form wicket:id="statusForm">
+				<table class="loggedUser" id="statusForm">
+					<tr>
+						<td class="label" id="userName"><label
+							wicket:id="statusLoginLabel"></label>&nbsp</td>
+						<td class="nameLabel">&nbsp<label wicket:id="loginNameLabel"></label></td>
+					</tr>
+					<tr>
+						<td class="logoutButton"><input type="submit"
+							wicket:id="doLogout" value="Odhlásiť" />&nbsp&nbsp</td>
+						<td class="userProfileLink">&nbsp<a wicket:id="profilePageLink"><label wicket:id="myProfile"></label></a></td>
+					</tr>
+
+				</table>
+				</form>
+				</td>
+			</tr>
+		</table>
+
+		</td>
+	</tr>
+</table>
+<div wicket:id="feedback">User Feedback</div>
+
+<table class="centerWrapper">
+	<tr>
+		<td>
+
+		<table class="coreMainPage">
+			<tr>
+				<td>
+				<table class="interCoreMainPage">
+				<tr>
+					<td style="text-align: center;">
+						<h1>Výber štýlu stránky</h1>
+					</td>
+				</tr>
+				<tr>
+					<td style="text-align: center;"> 
+						<h2>Vitajte na stránke venovanej ZŤP, pre pokračovanie zvoľte prosím štýl stránky</h2>
+					</td>
+				</tr>
+					<tr>
+						<td>
+						
+						<table class="style" align="center">
+								
+								<form wicket:id="form">
+								<tr>
+									<td class="style"><input type="submit" wicket:id="normalStyle"
+									value="Normálny štýl" /></td>
+									<td class="styleDescription"><b>Písmo 12px</b></td>
+								</tr>
+								<tr>
+									<td class="style"><input type="submit"
+									wicket:id="handicapStyle_contrast" value="Vysoký kontrast" /></td>
+									<td class="styleDescription">Písmo 16px, vysoký kontrast žltého písma a čierneho pozadia</td>
+								</tr>
+								<tr>
+									<td class="style"><input type="submit"
+									wicket:id="handicapStyle_simple" value="Ročné obdobia" /></td>
+									<td class="styleDescription">Písmo 12px, jednoduché farby, pozadie ročného obdobia</td>
+								</tr>
+								</form>		
+								
+						</table>
+						
+						</td>
+					</tr>
+					<tr>
+						<td style="text-align: center;">
+							<h3>Ďalšie nastavenia štýlu sa nachádzajú na záložke Prístupnosť </h3>
+						</td>
+					</tr>	
+				</table>
+				</td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+</table>
+<div wicket:id="footPanel">footPanel</div>
+</body>
+</html>

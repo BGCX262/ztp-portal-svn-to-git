@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<wicket:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="keywords" content="ZŤP, zdravotne ťažko postihnutý, udalosť">
+	<title>ZTP Portál - Detail udalosti</title>
+	<script type="text/javascript" src="javascript/mojozoom.js"></script>
+	<link type="text/css" href="mojozoom.css" rel="stylesheet" />
+
+	<SCRIPT type="text/javascript" src="javascript/fontResizer.js"></SCRIPT>
+	<SCRIPT type="text/javascript" src="javascript/vkboard2.js"></SCRIPT>
+	<SCRIPT type="text/javascript" src="javascript/virtualKeyboard.js"></SCRIPT>
+
+</wicket:head>
+<body>
+<SCRIPT type="text/javascript" src="javascript/wz_tooltip.js"></SCRIPT>
+<div wicket:id="headerPanel">headerPanel</div>
+
+<div wicket:id="feedback">User Feedback</div>
+
+<br />
+<a name="top"></a>
+<table class="centerWrapper">
+	<tr>
+		<td>
+		<table class="outerNavigationPanelBorder" ALIGN="LEFT">
+			<tr>
+				<td valign="top">
+				<table class="interNavigationPanel" ALIGN="LEFT">
+					<tr>
+						<td><a wicket:id="eventListLink" href="#">Zoznam udalostí</a></td>
+					</tr>
+					<tr>
+						<td><a wicket:id="newEventLink">Vložiť novú udalosť</a></td>
+					</tr>
+					<tr>
+						<td><a wicket:id="pictureView">Fotogaléria</a></td>
+					</tr>
+					<tr>
+						<td><a wicket:id="commentLink">Komentáre</a></td>
+					</tr>
+					<form wicket:id="eventForm">
+					<tr>
+						<td>
+						Počet účastníkov: <label wicket:id="registeredCount"></label>
+						</td>
+					</tr>
+					<tr>		
+						<td>
+							<input type="submit" wicket:id="submit"
+											value="Pridať sa" />
+						</td>
+					</tr>
+					</form>
+				</table>
+				</td>
+			</tr>
+		</table>
+		</td>
+
+		<td></td>
+
+		<td>
+		<table class="outerMainContentBorder">
+			<tr>
+				<td>
+				<table class="mainContent">
+					<tr>
+						<td>
+						<table class="whereIam">
+							<tr>
+								<td>Domov > Zobrazenie udalosti</td>
+								<td><A href="javascript:keyb_change()"
+									onclick=
+	javascript: blur();
+id="switch"><img
+									src="img/klavesnica.png" border="0" alt="Virtuálna klávesnica" /></A></td>
+								<td id="sizeController"><b><a href="javascript:decreaseFontSize();">&#709;</a> A
+								<a href="javascript:increaseFontSize();">&#708;</a></b></td>
+							</tr>
+						</table>
+						</td>
+					</tr>
+					<tr>
+						<td>
+						<table class="pageContent">
+							
+							<tr>
+								<td>
+									<table class="detail">
+									<form wicket:id="eventViewForm">
+									
+									<tr class="inputRow">
+										<td><label wicket:id="eventNameLabel"></label></td>
+										<td><label wicket:id="eventName">
+										</label></td>
+									</tr>
+									
+									<tr class="inputRow">
+										<td><label wicket:id="eventTypeLabel"></label></td>
+										<td><label wicket:id="eventType">
+										</label></td>
+									</tr>
+
+									<tr class="inputRow">
+										<td><label wicket:id="startDateLabel"></label></td>
+										<td><label wicket:id="startDate"> 
+										</label></td>
+									</tr>
+					
+									<tr class="inputRow">
+										<td><label wicket:id="endDateLabel"></label></td>
+										<td><label wicket:id="endDate"
+											id="endDate"></label></td>
+									</tr>									
+									
+									<tr class="inputRow">
+										<td><label wicket:id="eventAddressLabel"></label></td>
+										<td><label wicket:id="eventAddress"
+											id="address"></label></td>
+									</tr>
+									
+									<tr class="inputRow">
+										<td><label wicket:id="eventCountryLabel"></label></td>
+										<td><label wicket:id="eventCountry">
+										</label></td>
+										
+									</tr><tr class="inputRow">
+										<td><label wicket:id="eventCountyLabel"></label></td>
+										<td><label wicket:id="eventCounty">
+										</label></td>
+									</tr>
+
+									<tr class="inputRow">
+										<td><label wicket:id="eventTownLabel"></label></td>
+										<td><label wicket:id="eventTown">
+										</label></td>
+									</tr>
+									
+									<tr class="inputRow">
+										<td colspan="2"><wicket:container wicket:id="cmsContent"></wicket:container></td>
+									</tr>
+
+									</form>
+								</table>
+								
+								
+								</td>
+							</tr>
+							<tr>
+								<td>
+								<DIV id="keyboard"></DIV>
+								</td>
+							</tr>
+						</table>
+						</td>
+					</tr>
+				</table>
+				</td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<?xml version = '1.0'?>
+
+<!--
+=======================================================================
+	File: build.xml
+=======================================================================
+-->
+
+<project name="ztp-portal" default="make-bundles" basedir=".">
+
+	<target name="make-bundles" description="Generate properties bundles">
+
+		<delete>
+			<fileset dir="src" includes="**/*.properties" excludes="hib-connect.properties"/>
+		</delete>
+		
+		<native2ascii encoding="utf-8" src="MB" dest="src" includes="**/*.properties"/>
+		
+		<eclipse.refreshLocal resource="ztp-portal" depth="infinite"/>
+	</target>
+</project>

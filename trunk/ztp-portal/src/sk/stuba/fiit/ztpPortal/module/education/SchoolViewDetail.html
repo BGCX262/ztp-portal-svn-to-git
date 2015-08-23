@@ -1,0 +1,189 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<wicket:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="keywords" content="ZŤP, zdravotne ťažko postihnutý, vzdelávanie, kurz">
+	<title>ZTP Portál - Moja vzdelávacia inštitúcia</title>
+	<script type="text/javascript" src="javascript/mojozoom.js"></script>
+	<link type="text/css" href="mojozoom.css" rel="stylesheet" />
+
+	<SCRIPT type="text/javascript" src="javascript/fontResizer.js"></SCRIPT>
+	<SCRIPT type="text/javascript" src="javascript/vkboard2.js"></SCRIPT>
+	<SCRIPT type="text/javascript" src="javascript/virtualKeyboard.js"></SCRIPT>
+
+</wicket:head>
+<body>
+<SCRIPT type="text/javascript" src="javascript/wz_tooltip.js"></SCRIPT>
+<div wicket:id="headerPanel">headerPanel</div>
+
+<div wicket:id="feedback">User Feedback</div>
+
+<br />
+<a name="top"></a>
+<table class="centerWrapper">
+	<tr>
+		<td>
+		<table class="outerNavigationPanelBorder" ALIGN="LEFT">
+			<tr>
+				<td valign="top">
+				<table class="interNavigationPanel" ALIGN="LEFT">
+					<tr>
+						<td>
+						<a wicket:id="schoolListLink"
+							href="#">Zoznam inštitúcií</a></td>
+					</tr>
+				</table>
+				</td>
+			</tr>
+		</table>
+		</td>
+
+		<td></td>
+
+		<td>
+		<table class="outerMainContentBorder">
+			<tr>
+				<td>
+				<table class="mainContent">
+					<tr>
+						<td>
+						<table class="whereIam">
+							<tr>
+								<td>Domov > Vkladanie novej inštitúcie</td>
+								<td><A href="javascript:keyb_change()"
+									onclick=
+	javascript: blur();
+id="switch"><img
+									src="img/klavesnica.png" border="0" alt="Virtuálna klávesnica" /></A></td>
+								<td id="sizeController"><b><a href="javascript:decreaseFontSize();">&#709;</a> A
+								<a href="javascript:increaseFontSize();">&#708;</a></b></td>
+							</tr>
+						</table>
+						</td>
+					</tr>
+					<tr>
+						<td>
+						<table class="pageContent">
+							
+							<tr>
+								<td>
+									<table class="detail">
+									<form wicket:id="schoolViewDetailForm">
+									
+									<tr class="inputRow">
+										<td><label wicket:id="schoolNameLabel"></label></td>
+										<td><span wicket:id="nameAsterix"><input wicket:id="schoolName">
+										</input></span>
+										<img
+											src="img/help.gif"
+											onmouseover="Tip('Vložte názov inštitúcie \(max. 30 znakov\).')"
+											onmouseout="UnTip()" alt="Pomoc" />
+										</td>
+									</tr>
+									
+									<tr class="inputRow">
+										<td><label wicket:id="schoolContactPersonLabel"></label></td>
+										<td><span wicket:id="contactPersonAsterix"><input wicket:id="schoolContactPerson">
+										</input></span>
+										<img
+											src="img/help.gif"
+											onmouseover="Tip('Vložte meno kontaktnej osoby \(max. 30 znakov\).')"
+											onmouseout="UnTip()" alt="Pomoc" />
+										</td>
+									</tr>
+									
+									<tr class="inputRow">
+										<td><label wicket:id="schoolEmailContactLabel"></label></td>
+										<td><span wicket:id="emailContactAsterix"><input wicket:id="schoolEmailContact">
+										</input></span>
+										<img
+											src="img/help.gif"
+											onmouseover="Tip('Vložte email v prípade otázok.')"
+											onmouseout="UnTip()" alt="Pomoc" />
+										</td>
+									</tr>
+									
+									<tr class="inputRow">
+										<td><label wicket:id="schoolHomePageLabel"></label></td>
+										<td><input wicket:id="schoolHomePage">
+										</input></td>
+									</tr>
+									
+									<tr class="inputRow">
+										<td><label wicket:id="schoolPhoneLabel"></label></td>
+										<td><input wicket:id="schoolPhone">
+										</input></td>
+									</tr>
+									
+									<tr class="inputRow">
+										<td><label wicket:id="schoolTypeLabel"></label></td>
+										<td><span wicket:id="schoolTypeAsterix"><select wicket:id="schoolType">
+										</select></span></td>
+									</tr>								
+									
+									<tr class="inputRow">
+										<td><label wicket:id="schoolAddressLabel"></label></td>
+										<td><span wicket:id="addressAsterix"><input type="text" wicket:id="schoolAddress"
+											id="address" /></span></td>
+									</tr>
+
+									<tr class="inputRow">
+										<td><label wicket:id="countryLabel"></label></td>
+										<td><select wicket:id="country"></select></td>
+									</tr>
+									
+									<tr class="inputRow">
+										<td><label wicket:id="countyLabel"></label></td>
+										<td><select wicket:id="county"></select></td>
+									</tr>
+									
+									<tr class="inputRow">
+										<td><label wicket:id="schoolTownLabel"></label></td>
+										<td><span wicket:id="townAsterix"><input type="text" wicket:id="schoolTown">
+										</input></span></td>
+									</tr>
+									
+									<tr>
+										<td colspan="2">
+											<textarea wicket:id="richTextInput" rows="10" cols="60"></textarea>
+										</td>
+									</tr>
+									<tr>
+										<td><label wicket:id="activeLabel"></label></td>
+										<td><input type="checkbox" wicket:id="active" /></td>
+									</tr>									
+									<tr>
+										<td colspan="2"><input type="submit" wicket:id="submit"
+											value="Uložiť" /></td>
+									</tr>
+									<tr>
+										<td colspan="2"><input type="submit" wicket:id="reactivate"
+											value="Znova aktivovať" /></td>
+									</tr>
+									</form>
+								</table>
+								
+								
+								</td>
+							</tr>
+							<tr>
+								<td>
+								<DIV id="keyboard"></DIV>
+								</td>
+							</tr>
+							<tr>
+								<td>
+								</td>
+							</tr>
+						</table>
+						</td>
+					</tr>
+				</table>
+				</td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+</table>
+</body>
+</html>

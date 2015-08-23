@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>.:Administrácia:. CMS Obsah</title>
+<link rel="stylesheet" type="text/css" href="style/adminStyle.css" />
+</head>
+<body>
+
+<table class="adminHeader">
+	<tr class="mainHeader">
+		<td colspan="2">Administrácia</td>
+	</tr>
+	<tr>
+		<td class="profileNameInfo"><label wicket:id="profileNameInfo"></label></td>
+		<td class="logoutLink"><a wicket:id="logoutLink">Odhlásenie</a></td>
+	</tr>
+</table>
+<br>
+
+<span wicket:id="feedback">feedbackmessages will be put here</span>
+
+<table class="main">
+	<tr>
+		<td class="navigationPanel">
+		<table class="adminNavigation">
+			<tr>
+				<td><a wicket:id="userListLink">Zoznam používateľov</a></td>
+			</tr>
+			<tr>
+				<td><a wicket:id="globalSettingLink">Nastavenia</a></td>
+			</tr>
+			<tr>
+				<td><a wicket:id="contentListLink">Obsah stránok</a></td>
+			</tr>
+			<tr>
+				<td><a wicket:id="jobListLink">Zamestnanie</a></td>
+			</tr>
+			<tr>
+				<td><a wicket:id="forumListLink">Fórum</a></td>
+			</tr>
+			<tr>
+				<td><a wicket:id="eventListLink">Udalosti</a></td>
+			</tr>
+		</table>
+		</td>
+		<td class="contentPanel">
+		<form wicket:id="contentForm">
+		<table class="cmsContent">
+			<tr>
+				<td colspan="2">Hlavná stránka<br />
+				<textarea wicket:id="mainCmsContent" rows="20" cols="99"></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2"><input type="submit"
+					wicket:id="submitMainContent" value="Uložiť" /></td>
+			</tr>
+			<tr>
+				<td>
+				<hr>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">Stránka registrácie<br />
+				<textarea wicket:id="registrationContent" rows="20" cols="99"></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2"><input type="submit"
+					wicket:id="submitRegistrationContent" value="Uložiť" /></td>
+			</tr>
+			<tr>
+				<td>
+				<hr>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">Zamestnanie<br />
+				<textarea wicket:id="jobCmsContent" rows="15" cols="99"></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2"><input type="submit"
+					wicket:id="submitJobContent" value="Uložiť" /></td>
+			</tr>
+			<tr>
+				<td>
+				<hr>
+				</td>
+			</tr>
+		</table>
+		</form>
+		</td>
+	</tr>
+</table>
+
+
+</body>
+</html>

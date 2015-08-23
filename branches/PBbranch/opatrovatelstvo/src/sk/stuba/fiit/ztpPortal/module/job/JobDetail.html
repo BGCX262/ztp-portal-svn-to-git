@@ -1,0 +1,222 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Pridanie</title>
+<link rel="stylesheet" type="text/css" href="style/webStyle.css" />
+
+<script>
+	window.onload = function() {
+		var loginForm = document.getElementById("loginForm");
+		var statusForm = document.getElementById("statusForm");
+		var name = document.getElementById("login").value;
+		if (name == "")
+			statusForm.style.display = "none";
+		//			statusForm.style.visibility = "collapse";
+		else
+			loginForm.style.display = "none"
+			//			loginForm.style.visibility = "collapse";
+	}
+</script>
+
+</head>
+
+<body>
+
+<table class="outerHeaderBorder">
+	<tr>
+		<td>
+		<table class="headerBorder">
+			<tr>
+				<td rowspan="2" class="headerLogo"></td>
+				<td rowspan="2" class="headerSpare"></td>
+				<td class="headerLogin">
+				<form wicket:id="loginForm">
+				<table id="loginForm" class="form">
+					<tr class="loginFormName">
+						<td class="label"><label wicket:id="headerLoginLabel"></label></td>
+
+						<td class="input" colspan="2"><input type="text"
+							wicket:id="login" id="login" /></td>
+					</tr>
+					<tr>
+						<td class="label"><label wicket:id="headerPasswordLabel"></label></td>
+
+						<td class="input" colspan="2"><input type="password"
+							wicket:id="password" id="password" /></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td class="loginButton"><input type="submit"
+							wicket:id="doLoginButton" value="Prihlásiť" /></td>
+						<td class="registrationButton"><input type="submit"
+							wicket:id="registrationButton" value="Registrovať" /></td>
+					</tr>
+				</table>
+				<span wicket:id="doLoginFeedback">User Feedback</span></form>
+
+				<form wicket:id="statusForm">
+				<table class="loggedUser" id="statusForm">
+					<tr>
+						<td class="label" id="userName"><label
+							wicket:id="statusLoginLabel"></label>&nbsp</td>
+						<td class="nameLabel">&nbsp<label wicket:id="loginNameLabel"></label></td>
+					</tr>
+					<tr>
+						<td class="logoutButton"><input type="submit"
+							wicket:id="doLogout" value="Odhlásiť" />&nbsp&nbsp</td>
+						<td>&nbsp<a wicket:id="profilePageLink">môj profil</a></td>
+					</tr>
+
+				</table>
+				</form>
+				</td>
+			</tr>
+		</table>
+
+		</td>
+	</tr>
+</table>
+
+<br />
+
+<table class="outerNavigationHorizontalPanel">
+	<tr>
+		<td>
+		<table class="navigationHorizontalPanel">
+			<tr class="rowDownHr">
+				<td class="input" colspan="2"><input type="text" id="search" />
+				<input type="submit" value="Hladaj" /></td>
+				<td class="downHr" colspan="3"></td>
+				<td class="downHr"><a wicket:id="homeLink">Domov</a></td>
+				<td class="downHr">Mapa stránok</td>
+				<td class="downHr">Prístupnosť</td>
+			</tr>
+			
+			<tr>
+				<td class="navigation">Informácie</td>
+				<td class="navigation">Udalosti</td>
+				<td class="navigation"><a wicket:id="jobList">Zamestnanie</a></td>
+				<td class="navigation">Vzdelávanie</td>
+				<td class="navigation">Ubytovanie</td>
+				<td class="navigation">Pomôcky</td>
+				<td class="navigation">Opatrovatelia</td>
+				<td class="navigation">Fórum</td>
+			</tr>
+		</table>
+
+		</td>
+	</tr>
+</table>
+
+<span wicket:id="feedback">User Feedback</span>
+
+<br />
+<table class="centerWrapper">
+	<tr>
+		<td valign="top">
+		<table class="outerNavigationPanelBorder" ALIGN="LEFT">
+			<tr>
+				<td valign="top">
+				<table class="interNavigationPanel" ALIGN="LEFT">
+					<tr>
+						<td>Nová ponuka</td>
+					</tr>
+					<tr>
+						<td valign="top"><a wicket:id="jobListLink">Zoznam ponúk</a></td>
+					</tr>
+				</table>
+			</td>
+			</tr>
+		</table>
+
+		</td>
+		<td></td>
+		<td>
+
+		<table class="outerMainContentBorder" ALIGN="LEFT">
+			<tr>
+				<td>
+
+				<table class="mainContent">
+					<tr>
+						<td>
+						<table class="whereIam">
+							<tr>
+								<td>Zamestnanie > Nová informácia</td>
+							</tr>
+						</table>
+						</td>
+					</tr>
+					<tr>
+						<td>
+						<table class="pageContent">
+							<tr>
+								<td>
+
+								<table class="jobDetail">
+									<form wicket:id="jobDetailForm">
+									<tr class="inputRow">
+										<td><label wicket:id="specificationLabel"></label></td>
+										<td><input type="text" wicket:id="specification"
+											id="specification" /></td>
+									</tr>
+
+									<tr class="inputRow">
+										<td><label wicket:id="startDateLabel"></label></td>
+										<td><input type="text" wicket:id="startDate"
+											id="startDate" /></td>
+									</tr>
+
+									<tr class="inputRow">
+										<td><label wicket:id="hourPaymentLabel"></label></td>
+										<td><input type="text" wicket:id="hourPayment"
+											id="hourPayment" /></td>
+									</tr>
+
+									<tr class="inputRow">
+										<td><label wicket:id="workDurationLabel"></label></td>
+										<td><input type="text" wicket:id="workDuration"
+											id="workDuration" /></td>
+									</tr>
+
+									<tr class="inputRow">
+										<td><label wicket:id="townLabel"></label></td>
+										<td><select wicket:id="town">
+										</select></td>
+									</tr>
+
+									<tr class="inputRow">
+										<td><label wicket:id="sectorLabel"></label></td>
+										<td><select wicket:id="sector">
+										</select></td>
+									</tr>
+
+									<tr>
+										<td colspan="2"><input type="submit" wicket:id="submit"
+											value="Ulozit" /></td>
+									</tr>
+									</form>
+								</table>
+
+								</td>
+							</tr>
+						</table>
+						</td>
+					</tr>
+					<tr>
+					</tr>
+				</table>
+				</td>
+			</tr>
+		</table>
+
+
+		</td>
+	</tr>
+</table>
+<br clear=left>
+
+
+</body>
+</html>

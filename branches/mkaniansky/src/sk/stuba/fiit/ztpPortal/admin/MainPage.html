@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>.:Administrácia:.</title>
+<link rel="stylesheet" type="text/css" href="style/adminStyle.css" />
+</head>
+<body>
+
+<table class="adminHeader">
+	<tr class="mainHeader">
+		<td colspan="2">Administrácia portálu</td>
+	</tr>
+	<tr>
+		<td class="profileNameInfo"><label wicket:id="profileNameInfo"></label></td>
+		<td class="logoutLink"><a wicket:id="logoutLink">Odhlásenie</a></td>
+	</tr>
+</table>
+<br>
+
+<table class="main">
+	<tr>
+		<td class="navigationPanel">
+			<table class="adminNavigation">
+				<tr>
+					<td><a wicket:id="userListLink">Zoznam používateľov</a></td>
+				</tr>
+				<tr>
+					<td><a wicket:id="contentListLink">Obsah stránok</a></td>
+				</tr>
+				<tr>
+					<td><a wicket:id="globalSettingLink">Nastavenia</a></td>
+				</tr>
+				<tr>
+					<td><a wicket:id="jobListLink">Job</a></td>
+				</tr>		
+				<tr>
+					<td><a wicket:id="forumListLink">Fórum</a></td>
+				</tr>			
+				<tr>
+					<td><a wicket:id="eventListLink">Udalosti</a></td>
+				</tr>
+			</table>
+		</td>
+		<td class="contentPanel">
+			<table class="mainContent">
+				<tr>
+					<td>Tu je hlavny content</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+
+<hr>
+G-force
+
+</body>
+</html>

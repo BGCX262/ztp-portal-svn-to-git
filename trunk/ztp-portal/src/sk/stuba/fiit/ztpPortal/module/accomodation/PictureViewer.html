@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<wicket:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>ZTP Portál - Vaša cesta k informáciám</title>
+	<script type="text/javascript" src="javascript/mojozoom.js"></script>
+	<link type="text/css" href="mojozoom.css" rel="stylesheet" />
+
+	<SCRIPT type="text/javascript" src="javascript/fontResizer.js"></SCRIPT>
+	<SCRIPT type="text/javascript" src="javascript/vkboard2.js"></SCRIPT>
+	<SCRIPT type="text/javascript" src="javascript/virtualKeyboard.js"></SCRIPT>
+
+	<script type="text/javascript" src="javascript/tjpzoom.js"></script>
+	<script type="text/javascript" src="javascript/tjpzoom_config_smart.js"></script>
+
+	<script type="text/javascript" >
+
+	function tjpZoomSwitch(){
+		var zoomON = <img src="img/Search.png" border="1" alt="Zoom" />
+		var zoomOFF = <img src="img/Search.png" border="1" alt="Zoom" />
+
+		if(TJPzoomswitch(document.getElementById('eventPicture'))) {this.innerHTML=zoomON} else {this.innerHTML=zoomOFF}; return false;
+	}
+	</script>
+
+</wicket:head>
+<body>
+<SCRIPT type="text/javascript" src="javascript/wz_tooltip.js"></SCRIPT>
+<div wicket:id="headerPanel">headerPanel</div>
+
+<div wicket:id="feedback">User Feedback</div>
+
+<br />
+<a name="top"></a>
+<table class="centerWrapper">
+	<tr>
+		<td>
+		<table class="outerNavigationPanelBorder" ALIGN="LEFT">
+			<tr>
+				<td valign="top">
+				<table class="interNavigationPanel" ALIGN="LEFT">
+					<tr>
+						<td><a wicket:id="eventListLink" href="#">Zoznam ubytovaní</a></td>
+					</tr>
+					<tr>
+						<td><a wicket:id="newEventLink" href="#">Vložiť nové ubytovanie</a></td>
+					</tr>
+					<tr>
+						<td><a wicket:id="pictureUpload">Vložiť obrázky</a></td>
+					</tr>
+				</table>
+				</td>
+			</tr>
+		</table>
+		</td>
+
+		<td></td>
+
+		<td>
+		<table class="outerMainContentBorder">
+			<tr>
+				<td>
+				<table class="mainContent">
+					<tr>
+						<td>
+						<table class="whereIam">
+							<tr>
+								<td>Domov > Ubytovanie > Prezeranie > Fotogaléria</td>
+								<td><a href="#" onclick="tjpZoomSwitch()"><img src="img/Search.png" border="1" alt="Zoom" /></a></td>
+								<td><A href="javascript:keyb_change()" onclick=javascript:
+									blur();
+id="switch"><img src="img/klavesnica.bmp"
+									border="0" alt="Virtuálna klávesnica" /></A></td>
+								<td id="sizeController"><b><a
+									href="javascript:decreaseFontSize();">&#709;</a> A <a
+									href="javascript:increaseFontSize();">&#708;</a></b></td>
+							</tr>
+						</table>
+						</td>
+					</tr>
+					<tr>
+						<td>
+						<table class="pageContent">
+							<tr>
+								<td>
+								<table class="pictureList">
+									<div wicket:id="navigator"></div>
+									<div wicket:id="pictureListView" class="commentListView"
+											id="commentListView">
+									<tr>
+										<td>
+											<div>
+											<wicket:link>
+												<img class="eventPicture" wicket:id="eventPicture" onmouseover="TJPzoomif(this);" id="eventPicture"></img>
+											</wicket:link>
+											</div>
+										</td>
+										<td>	
+										<a wicket:id="activateLink">Aktivovať</a>
+										<a wicket:id="deactivateLink">Deaktivovať</a>
+										
+										</td>
+									</tr>
+									</div>
+								</table>
+								</td>
+							</tr>
+							<tr>
+								<td>
+								<DIV id="keyboard"></DIV>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<span wicket:id="result"></span>
+									<div wicket:id="modal1"></div>
+								</td>
+							</tr>
+						</table>
+						</td>
+					</tr>
+				</table>
+				</td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+</table>
+</body>
+</html>

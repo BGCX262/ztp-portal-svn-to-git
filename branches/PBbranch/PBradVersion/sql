@@ -1,0 +1,132 @@
+create table REGISTEREDUSER (
+
+ID int8,
+NAME varchar (255),
+SURNAME varchar (255),
+LOGIN varchar (255),
+PASSWORD varchar (255),
+EMAIL varchar (255),
+REGION varchar (255),
+TOWN varchar (255),
+HANDICAPTYPE varchar (255),
+ADMIN boolean,
+STATE boolean,
+CHANGEDATE timestamp,
+REGISTRATIONDATE timestamp,
+PREFERREGION boolean,
+primary key(ID));
+
+CREATE TABLE Job ( 
+	id int8 NOT NULL,
+	region varchar(255),
+	town varchar(255),
+	sector integer NOT NULL,
+	position integer NOT NULL,
+	contract_type integer NOT NULL,
+	start_date timestamp,
+	job_specif varchar(255) NOT NULL,
+	hour_payment integer NULL,
+	work_duration integer NULL,
+	creator_id int8 NOT NULL,
+	type_of_advert integer NOT NULL,
+	import_date timestamp,
+	state boolean,
+	change_date timestamp,
+	urlLink varchar(255),
+	primary key(ID)
+);
+
+CREATE TABLE Town(
+id int8,
+name varchar(255),
+primary key(ID)
+);
+
+Insert into Town values( 1, 'Bratislava' );
+Insert into Town values( 2, 'Bansk· Bystrica' );
+Insert into Town values( 3, 'Bardejov' );
+Insert into Town values( 4, 'B·novce nad Bebravou' );
+Insert into Town values( 5, 'Brezno');
+Insert into Town values( 6, 'Bansk· ätiavnica' );
+Insert into Town values( 7, 'BytËa' );
+Insert into Town values( 8, '»adca' );
+Insert into Town values( 9, 'Doln˝ KubÌn' );
+Insert into Town values( 10, 'Dunajsk· Streda' );
+Insert into Town values( 11, 'Detva' );
+Insert into Town values( 12, 'Galanta' );
+Insert into Town values( 13, 'Gelnica' );
+Insert into Town values( 14, 'Hlohovec' );
+Insert into Town values( 15, 'HumennÈ' );
+Insert into Town values( 16, 'Ilava' );
+Insert into Town values( 17, 'Krupina' );
+Insert into Town values( 18, 'Koöice' );
+Insert into Town values( 19, 'Keûmarok' );
+Insert into Town values( 20, 'KysuckÈ NovÈ Mesto' );
+Insert into Town values( 21, 'Kom·rno' );
+Insert into Town values( 22, 'Koöice - okolie' );
+Insert into Town values( 23, 'LuËenec' );
+Insert into Town values( 24, 'LevoËa' );
+Insert into Town values( 25, 'Liptovsk˝ Mikul·ö' );
+Insert into Town values( 26, 'Levice' );
+Insert into Town values( 27, 'Malacky' );
+Insert into Town values( 28, 'Michalovce' );
+Insert into Town values( 29, 'Medzilaborce' );
+Insert into Town values( 30, 'Martin' );
+Insert into Town values( 31, 'Myjava' );
+Insert into Town values( 32, 'NovÈ Mesto n/V·h.' );
+Insert into Town values( 33, 'N·mestovo' );
+Insert into Town values( 34, 'Nitra' );
+Insert into Town values( 35, 'NovÈ Z·mky' );
+Insert into Town values( 36, 'Povaûsk· Bystrica' );
+Insert into Town values( 37, 'Prievidza' );
+Insert into Town values( 38, 'Partiz·nske' );
+Insert into Town values( 39, 'Pezinok' );
+Insert into Town values( 40, 'Pieöùany' );
+Insert into Town values( 41, 'Preöov' );
+Insert into Town values( 42, 'Poprad' );
+Insert into Town values( 43, 'Polt·r' );
+Insert into Town values( 44, 'P˙chov' );
+Insert into Town values( 45, 'Rev˙ca' );
+Insert into Town values( 46, 'Ruûomberok' );
+Insert into Town values( 47, 'Rimavsk· Sobota' );
+Insert into Town values( 48, 'RoûÚava' );
+Insert into Town values( 49, 'äaæa' );
+Insert into Town values( 50, 'Sabinov' );
+Insert into Town values( 51, 'Senec' );
+Insert into Town values( 52, 'Senica' );
+Insert into Town values( 53, 'Skalica' );
+Insert into Town values( 54, 'SvidnÌk' );
+Insert into Town values( 55, 'Star· ºubovÚa' );
+Insert into Town values( 56, 'Spiösk· Nov· Ves' );
+Insert into Town values( 57, 'Sobrance' );
+Insert into Town values( 58, 'Stropkov' );
+Insert into Town values( 59, 'Snina' );
+Insert into Town values( 60, 'TrenËÌn' );
+Insert into Town values( 61, 'TopoæËany' );
+Insert into Town values( 62, 'TurËianske Teplice' );
+Insert into Town values( 63, 'TvrdoöÌn' );
+Insert into Town values( 64, 'Trnava' );
+Insert into Town values( 65, 'Trebiöov' );
+Insert into Town values( 66, 'Veæk˝ KrtÌö' );
+Insert into Town values( 67, 'Vranov nad Topæou' );
+Insert into Town values( 68, 'éilina' );
+Insert into Town values( 69, 'éarnovica' );
+Insert into Town values( 70, 'éiar nad Hronom' );
+Insert into Town values( 71, 'ZlatÈ Moravce' );
+Insert into Town values( 72, 'Zvolen' );
+
+CREATE TABLE Job_Sector(
+id int8,
+name varchar(255),
+primary key(ID)
+);
+
+Insert into Job_Sector values( 0, 'Telekomunik·cie' );
+Insert into Job_Sector values( 1, 'BankovnÌctvo' );
+Insert into Job_Sector values( 2, 'Sluûby' );
+
+insert into REGISTEREDUSER (ID, NAME, SURNAME, LOGIN, PASSWORD) values ('0','Admin','Administrator','admin','admin');
+
+create table Job (jobId int8, description varchar(255), urlLink varchar(255), primary key (jobId));
+
+create sequence hibernate_sequence;

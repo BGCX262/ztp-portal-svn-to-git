@@ -1,0 +1,190 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>.:Administrácia:. CMS Obsah</title>
+<link rel="stylesheet" type="text/css" href="style/adminStyle.css" />
+</head>
+<body>
+
+<table class="adminHeader">
+	<tr class="mainHeader">
+		<td colspan="2">Administrácia</td>
+	</tr>
+	<tr>
+		<td class="profileNameInfo"><label wicket:id="profileNameInfo"></label></td>
+		<td class="logoutLink"><a wicket:id="logoutLink">Odhlásenie</a></td>
+	</tr>
+</table>
+<br>
+
+<span wicket:id="feedback">feedbackmessages will be put here</span>
+
+<table class="main">
+	<tr>
+		<td class="navigationPanel">
+			<div wicket:id="panel">this gets replaced</div>
+		</td>
+		<td class="contentPanel">
+		<form wicket:id="contentForm">
+		<table class="cmsContent">
+			<tr>
+				<td colspan="2">Hlavná stránka<br />
+				<textarea wicket:id="mainCmsContent" rows="20" cols="99"></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2"><input type="submit"
+					wicket:id="submitMainContent" value="Uložiť" /></td>
+			</tr>
+			<tr>
+				<td>
+				<hr>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">Stránka registrácie<br />
+				<textarea wicket:id="registrationContent" rows="20" cols="99"></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2"><input type="submit"
+					wicket:id="submitRegistrationContent" value="Uložiť" /></td>
+			</tr>
+			<tr>
+				<td>
+				<hr>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">Zamestnanie<br />
+				<textarea wicket:id="jobCmsContent" rows="15" cols="99"></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2"><input type="submit"
+					wicket:id="submitJobContent" value="Uložiť" /></td>
+			</tr>
+			<tr>
+				<td>
+				<hr>
+				</td>
+			</tr>
+			
+			<tr>
+				<td colspan="2">Informácie<br />
+				<textarea wicket:id="informationCmsContent" rows="15" cols="99"></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2"><input type="submit"
+					wicket:id="submitInformationContent" value="Uložiť" /></td>
+			</tr>
+			<tr>
+				<td>
+				<hr>
+				</td>
+			</tr>
+			
+			
+			<tr>
+				<td colspan="2">Udalosti<br />
+				<textarea wicket:id="eventCmsContent" rows="15" cols="99"></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2"><input type="submit"
+					wicket:id="submitEventContent" value="Uložiť" /></td>
+			</tr>
+			<tr>
+				<td>
+				<hr>
+				</td>
+			</tr>
+			
+			
+			<tr>
+				<td colspan="2">Vzdelávanie<br />
+				<textarea wicket:id="educationCmsContent" rows="15" cols="99"></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2"><input type="submit"
+					wicket:id="submitEducationContent" value="Uložiť" /></td>
+			</tr>
+			<tr>
+				<td>
+				<hr>
+				</td>
+			</tr>
+			
+			
+			<tr>
+				<td colspan="2">Ubytovanie<br />
+				<textarea wicket:id="livingCmsContent" rows="15" cols="99"></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2"><input type="submit"
+					wicket:id="submitLivingContent" value="Uložiť" /></td>
+			</tr>
+			<tr>
+				<td>
+				<hr>
+				</td>
+			</tr>
+			
+			<tr>
+				<td colspan="2">Pomôcky<br />
+				<textarea wicket:id="healthAidCmsContent" rows="15" cols="99"></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2"><input type="submit"
+					wicket:id="submitHealthAidContent" value="Uložiť" /></td>
+			</tr>
+			<tr>
+				<td>
+				<hr>
+				</td>
+			</tr>
+
+			<tr>
+				<td colspan="2">Opatrovateľstvo<br />
+				<textarea wicket:id="dayCareCmsContent" rows="15" cols="99"></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2"><input type="submit"
+					wicket:id="submitDayCareContent" value="Uložiť" /></td>
+			</tr>
+			<tr>
+				<td>
+				<hr>
+				</td>
+			</tr>		
+
+			<tr>
+				<td colspan="2">Fórum<br />
+				<textarea wicket:id="forumCmsContent" rows="15" cols="99"></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2"><input type="submit"
+					wicket:id="submitForumContent" value="Uložiť" /></td>
+			</tr>
+			<tr>
+				<td>
+				<hr>
+				</td>
+			</tr>			
+			
+		</table>
+		</form>
+		</td>
+	</tr>
+</table>
+
+
+</body>
+</html>

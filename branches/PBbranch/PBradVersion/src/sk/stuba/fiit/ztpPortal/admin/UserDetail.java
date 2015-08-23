@@ -1,0 +1,240 @@
+package sk.stuba.fiit.ztpPortal.admin;
+
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Arrays;
+import java.util.Date;
+import java.util.List;
+
+import sk.stuba.fiit.ztpPortal.core.Registration.RegistrationForm;
+import sk.stuba.fiit.ztpPortal.databaseController.RegisteredUserController;
+import sk.stuba.fiit.ztpPortal.databaseModel.RegisteredUser;
+import org.apache.wicket.markup.html.basic.Label;
+import org.apache.wicket.markup.html.form.Button;
+import org.apache.wicket.markup.html.form.CheckBox;
+import org.apache.wicket.markup.html.form.DropDownChoice;
+import org.apache.wicket.markup.html.form.Form;
+import org.apache.wicket.markup.html.form.PasswordTextField;
+import org.apache.wicket.markup.html.form.TextField;
+import org.apache.wicket.markup.html.panel.FeedbackPanel;
+import org.apache.wicket.model.PropertyModel;
+import org.apache.wicket.model.ResourceModel;
+import org.apache.wicket.util.value.ValueMap;
+
+public class UserDetail extends AdminPage {
+
+	private static final long serialVersionUID = 1L;
+	
+	private static RegisteredUserController userController;
+	
+	private static RegisteredUser user;
+	
+	private static FeedbackPanel feedbackPanel;
+	
+	private String login;
+	
+	public UserDetail(String loginName){
+		login = ((AdminSession) getSession()).getLoged();
+		
+		user = new RegisteredUserController().getRegisteredUserByLogin(loginName);
+		
+		Label loginNameInfoLabel= new Label("profileNameInfo", "Ste prihlásený ako "+login);
+		add(loginNameInfoLabel);
+	     
+	    AdminNavigation adminNavigation = new AdminNavigation();
+	     
+	    add(adminNavigation.getUserLogOutLing());
+	     
+	    add(adminNavigation.getUserListLink());
+	    
+	    feedbackPanel = new FeedbackPanel("feedback");
+        add(feedbackPanel);
+	     
+	    add(new RegistrationForm("registrationForm"));
+	     
+	}
+	     public final static class RegistrationForm extends Form {
+
+	 		private static final long serialVersionUID = 1L;
+	 		
+	 		TextField name;
+	 		TextField surname;
+	 		TextField login;
+	 		TextField password;
+	 		TextField passwordAgain;
+	 		TextField email;
+	 		Button submit;
+	 		TextField region;
+	 		TextField town;
+	 		TextField handicapType;
+	 		
+//	 		private static final List REGION_LIST = Arrays.asList(new String[] {"The Server Side", "Java Lobby", "Java.Net" });
+	 		
+//	 		private static final List TOWN_LIST = Arrays.asList(new String[] {"The Server Side", "Java Lobby", "Java.Net" });
+	 		
+//	 		private static final List HANDICAPTYPE_LIST = Arrays.asList(new String[] {"The Server Side", "Java Lobby", "Java.Net" });
+	 		
+	 		CheckBox preferRegion;
+	 		CheckBox status;
+	 		CheckBox admin;
+	 		
+//	 		ComponentFeedbackPanel loginNameFeedback;
+//	 		ComponentFeedbackPanel passwordFeedback;
+//	 		ComponentFeedbackPanel submitFeedback;
+//	 		ComponentFeedbackPanel titleFeedback;
+//	 		ComponentFeedbackPanel addressFeedback;
+//	 		ComponentFeedbackPanel passwordAgainFeedback;
+//	 		ComponentFeedbackPanel surnameFeedback;
+//	 		ComponentFeedbackPanel nameFeedback;
+	 		
+	 		private ValueMap properties = new ValueMap();
+	 
+	 		DateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy");
+	 		
+	 		public RegistrationForm(final String id) {
+	 			super(id);
+	 			
+	 			
+	 			name = new TextField("name", new PropertyModel(properties,
+	 			"name"));
+	 			name.setRequired(true);
+	 			name.setModelValue(user.getName());
+	 			name.setEnabled(false);
+	 			add(name);
+	 		//	add(nameFeedback = new ComponentFeedbackPanel("nameFeedback",
+	 		//			name));
+	 			add(new Label("nameLabel", "Meno"));
+	 	
+	 	
+	 			surname = new TextField("surname", new PropertyModel(properties,
+	 			"surname"));
+	 			surname.setRequired(true);
+	 			surname.setModelValue(user.getSurname());
+	 			surname.setEnabled(false);
+	 			add(surname);
+	 		//	add(surnameFeedback = new ComponentFeedbackPanel("surnameFeedback",
+	 		//		surname));
+	 			add(new Label("surnameLabel", "Priezvisko"));
+	 			
+	 			email = new TextField("email", new PropertyModel(properties,
+	 			"email"));
+	 			email.setRequired(true);
+	 			email.setModelValue(user.getEmail());
+	 			email.setEnabled(false);
+	 			add(email);
+//	 			add(addressFeedback = new ComponentFeedbackPanel("addressFeedback",
+//	 					address));
+	 			add(new Label("emailLabel", "Email"));
+	 			
+	 			login = new TextField("login", new PropertyModel(properties,
+	 					"login"));
+	 			login.setRequired(true);
+	 			login.setModelValue(user.getLogin());
+	 			login.setEnabled(false);
+	 			add(login);
+//	 			add(loginNameFeedback = new ComponentFeedbackPanel("loginNameFeedback",
+//	 					loginName));
+	 			add(new Label("loginLabel", "Login"));
+
+	 			region= new TextField("region", new PropertyModel(properties,
+	 					"region"));
+	 			region.setRequired(false);
+	 			region.setModelValue(user.getRegion());
+	 			region.setEnabled(false);
+	 			add(region);
+	 			add(new Label("regionLabel","Region"));
+	 			
+	 			town= new TextField("town", new PropertyModel(properties,
+	 					"town"));
+	 			town.setRequired(false);
+	 			town.setModelValue(user.getTown());
+	 			town.setEnabled(false);
+	 			add(town);
+	 			add(new Label("townLabel","Town"));
+	 			
+	 			handicapType= new TextField("handicapType", new PropertyModel(properties,
+	 					"handicapType"));
+	 			handicapType.setRequired(false);
+	 			handicapType.setModelValue(user.getHandicapType());
+	 			handicapType.setEnabled(false);
+	 			add(handicapType);
+	 			add(new Label("handicapTypeLabel","Handicap"));
+	 			
+	 			status= new CheckBox("status",new PropertyModel(properties,
+					"status"));
+	 			if (user.isState()) status.setModelValue("true");
+	 				else status.setModelValue("false");
+	 			add(status);
+	 			add(new Label("statusLabel","Aktívny"));
+	 			
+	 			admin= new CheckBox("admin",new PropertyModel(properties,
+				"admin"));
+	 			if (user.isAdmin()) admin.setModelValue("true");
+	 				else admin.setModelValue("false");
+	 			add(admin);
+	 			add(new Label("adminLabel","Administrátor"));
+	 			
+	 			add(new Label("registrationDateLabel","Dátum registrácie:"));
+	 			add(new Label("userRegistrationDateLabel",dateFormat.format(user.getRegistrationDate())));
+	 			
+	 			add(new Label("lastChangeDateLabel","Dátum zmeny:"));
+	 			add(new Label("userLastChangeDateLabel",dateFormat.format(user.getChangeDate())));
+	 			
+	 			password = new PasswordTextField("password", new PropertyModel(
+	 					properties, "password"));
+	 			add(password);
+	 			password.setRequired(false);
+//	 			add(passwordFeedback = new ComponentFeedbackPanel(
+//	 					"passwordFeedback", password));
+	 			add(new Label("passwordLabel", "Heslo:"));
+
+	 			passwordAgain = new PasswordTextField("passwordAgain", new PropertyModel(properties,
+	 			"passwordAgain"));
+	 			passwordAgain.setRequired(false);
+	 			add(passwordAgain);
+//	 			add(passwordAgainFeedback = new ComponentFeedbackPanel("passwordAgainFeedback",
+//	 					passwordAgain));
+	 			add(new Label("passwordAgainLabel", "Heslo znova"));
+	 			
+	 			
+	 			add(submit = new Button("submit",
+	 					new ResourceModel("button.submit")));
+//	 			add(submitFeedback = new ComponentFeedbackPanel("submitFeedback",
+//	 					submit));
+	 		}
+	 		
+	 		private boolean checkPassword(String password, String passwordAgain){
+	 			return password.equals(passwordAgain);
+	 		}
+	 		
+	 		protected void onSubmit() {
+	 			userController = new RegisteredUserController();
+	 			String passwordCheck = password.getModelObjectAsString();
+	 			String passwordAgainCheck =passwordAgain.getModelObjectAsString();
+	 			
+	 			if (status.getModelObjectAsString().equals("true"))
+	 				user.setState(true);
+	 			else user.setState(false);
+	 			
+	 			if (admin.getModelObjectAsString().equals("true"))
+	 				user.setAdmin(true);
+	 			else user.setAdmin(false);
+	 			
+	 			if (checkPassword(passwordCheck,passwordAgainCheck)){	
+			 			user.setPassword(password.getModelObjectAsString());
+			 			
+			 			//user.setState(state);
+	 			
+	 			if (userController.updateUser(user)) feedbackPanel.info("Successful");
+	 				else feedbackPanel.warn("Problem occured");
+	 			} 
+	 			else if  (passwordCheck=="" || passwordAgainCheck==""){
+		 			
+	 				
+	 				if (userController.updateUser(user)) feedbackPanel.info("Successful");
+		 				else feedbackPanel.warn("Problem occured");
+	 			}
+	 			userController = null;
+	 		}
+	}
+}

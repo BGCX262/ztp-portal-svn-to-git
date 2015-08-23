@@ -1,0 +1,269 @@
+@CHARSET "UTF-8";
+
+table.outerHeaderBorder{
+	margin: auto;
+	background-color: #FFCC00;
+	border-width: 6px;
+	border-style: solid;
+	border-color: #FFCC00;
+	padding: 0px;
+	border-spacing: 0px;
+	
+}
+
+table.coreMainPage {
+	width: 1024px;
+	margin: auto;
+	border-style: solid;
+	border-width: 6px;
+	background-color: #FFCC00;
+	border-color: #FFCC00;
+}
+
+table.interCoreMainPage{
+	width: 100%;
+	background-color: white;
+	border-style: solid;
+	border-width: 1px 1px 1px 1px;
+}
+
+hr {
+  border: 1px;
+  width: 100%;
+  height: 1px;
+  color: red;
+  background-color: red;
+}
+
+table.navigationHorizontalPanel td.downHr{
+	border-bottom: 1px solid black;
+	text-align: center;
+}
+
+table.navigationHorizontalPanel td.input{
+	border-bottom: 1px solid black;
+}
+
+table.outerNavigationHorizontalPanel{
+	margin: auto;
+	background-color: #FFCC00;
+	border-width: 6px;
+	border-style: solid;
+	border-color: #FFCC00;
+	padding: 0px;
+	border-spacing: 0px;
+}
+
+table.navigationHorizontalPanel{
+	width: 1024px;
+	height: 50px;
+	
+	padding: 0px;
+	border-style: solid;
+	border-width: 1px 1px 1px 1px;
+	margin: 0 0 0 0;
+    border-spacing: 0px;
+    background: url(../img/menuBarInner.png);
+}
+
+table.navigationHorizontalPanel td.navigation{
+	width: 12.5%;
+	text-align: center;
+	vertical-align: center;
+}
+
+
+table.centerWrapper{
+	width: 1044px;
+	margin: auto;
+	border-width: 0 0 0 0;
+}
+
+table.outerNavigationPanelBorder{
+	margin: auto;
+	width: 204px;
+	height: 300px;
+	background-color: #FFCC00;
+	border-width: 6px;
+	border-style: solid;
+	border-color: #FFCC00;
+	padding: 0px;
+	border-spacing: 0px;
+}
+
+table.interNavigationPanel{
+	width: 100%;
+	height: 100%;
+	background-color: white;
+	border-style: solid;
+	border-width: 1px 1px 1px 1px;
+	padding: 0px;
+	background: url(../img/submenuInner.png);
+}
+
+table.interNavigationPanel td{
+	vertical-align: top;
+}
+
+
+table.whereIam {
+	width: 100%;
+	background-color: white;
+	border-style: solid;
+	border-width: 1px 1px 1px 1px;
+	padding: 0px;
+	background: url(../img/mainPageNavigation.png);
+}
+
+table.pageContent{
+	width: 100%;
+	background-color: white;
+	border-style: solid;
+	border-width: 1px 1px 1px 1px;
+	padding: 0px;
+}
+
+table.outerMainContentBorder{
+	margin: auto;
+	width: 820px;
+	background-color: #FFCC00;
+	border-width: 6px;
+	border-style: solid;
+	border-color: #FFCC00;
+	padding: 0px;
+	border-spacing: 0px;
+	vertical-align: top;
+}
+
+table.mainContent{
+	width: 100%; 
+	background-color: #FFCC00;
+	border-style: solid;
+	border-width: 0px 0px 0px 0px;
+}
+
+table.headerBorder{
+	width : 1024px;                                  
+    height : 100px;
+    border-style: solid;
+    border-spacing: 0px;
+    padding: 0px;
+	border-style: solid;
+	border-width: 1px 1px 1px 1px;
+    border-spacing: 0px;
+    background: url(../img/headerInner.png);
+}
+
+table.headerBorder td.headerLogo{
+	width : 600px;                                  
+    height : 100px;
+
+}
+
+table.headerBorder td.headerSpare{
+	height : 100px;
+	
+}
+
+table.headerBorder td.headerLogin{
+	width : 250px; 
+	height : 100px;
+	
+}
+
+table.headerBorder td.headerStatus{
+	width : 250px; 
+	height : 100px;
+}
+
+table.form {
+	width : 320px; 
+	height : 90px;
+	border-width: 0 0 0 0;
+	padding: 0px;
+	display: block;
+}
+
+table.form td.label {
+	width : 220px; 
+	height : 15px;
+	text-align: right;
+	padding: 0px;
+}
+
+table.form td.input{
+	width : 100px; 
+	height : 15px;
+	padding: 0px;
+}
+
+table.form td.loginButton{
+	width : 50px; 
+	height : 15px;
+	padding: 0px;
+}
+
+table.form td.registrationButton{
+	width : 50px; 
+	height : 15px;
+	padding: 0px;
+}
+
+table.loggedUser{
+	width : 320px;
+	padding: 0px;
+	border-width: 0 0 0 0;
+	padding: 0px;
+	border-style: solid;
+}
+
+table.loggedUser td.label {
+	width : 220px; 
+	height : 15px;
+	text-align: right;
+	padding: 0px;
+}
+
+table.loggedUser td.nameLabel {
+	width : 220px; 
+	height : 15px;
+	text-align: left;
+	padding: 0px;
+}
+
+
+table.loggedUser td.logoutButton{
+	width : 50px; 
+	height : 15px;
+	padding: 0px;
+	text-align: right;
+}
+
+table.jobList{
+
+}
+
+table.jobDetail{
+	background-color: white;
+	margin: auto;
+	border-width: 0 0 0 0;
+	border-spacing: 0px;
+}
+
+table.jobDetail tr.inputRow{
+	height: 30px;
+	text-align: left;
+}
+
+
+
+
+        <style type="text/css">
+		th.last-name *, td.last-name {
+			font-weight: bold;
+			color: #AA0000;
+		}
+		th.numeric, td.numeric {
+			text-align: right !important;
+		}
+	</style> 

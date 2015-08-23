@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<wicket:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="keywords" content="ZŤP, zdravotne ťažko postihnutý, registrácia">
+	<title>Registrácia</title>
+
+	<SCRIPT type="text/javascript" src="javascript/fontResizer.js"></SCRIPT>
+	<SCRIPT type="text/javascript" src="javascript/vkboard2.js"></SCRIPT>
+	<SCRIPT type="text/javascript" src="javascript/virtualKeyboard.js"></SCRIPT>
+
+</wicket:head>
+<body>
+<SCRIPT type="text/javascript" src="javascript/wz_tooltip.js"></SCRIPT>
+<div wicket:id="headerPanel">headerPanel</div>
+
+<div wicket:id="feedback"><b>feedback</b></div>
+
+
+<br />
+<table class="centerWrapper">
+	<tr>
+		<td>
+		<table class="outerMainContentBorder" ALIGN="LEFT">
+			<tr>
+				<td>
+				<table class="mainContent">
+					<tr>
+						<td>
+						<table class="whereIam">
+							<tr>
+								<td>Domov > Registrácia</td>
+								<td><A href="javascript:keyb_change()"
+									onclick="javascript:blur()" id="switch"><img
+									src="img/klavesnica.bmp" border="0" alt="Virtuálna klávesnica" /></A></td>
+								<td id="sizeController"><b><a href="javascript:decreaseFontSize();">ˇ</a> A
+								<a href="javascript:increaseFontSize();">&#94;</a></b></td>
+							</tr>
+						</table>
+						</td>
+					</tr>
+					<tr>
+						<td>
+						<table class="pageContent">
+							<tr>
+								<td><wicket:container wicket:id="cmsContent"></wicket:container></td>
+							</tr>
+							<tr>
+								<td>
+								<table class="registration">
+									<form wicket:id="registrationForm">
+									<tr class="inputRow">
+										<td class="label"><label wicket:id="nameLabel"></label></td>
+										<td><span wicket:id="nameAsterix"><input
+											type="text" wicket:id="name" id="name"
+											onkeyup="getCaretPositions(this);"
+											onclick="getCaretPositions(this);" /></span></td>
+									</tr>
+
+
+									<tr class="inputRow">
+										<td class="label"><label wicket:id="surnameLabel"></label></td>
+										<td><span wicket:id="surnameAsterix"><input
+											type="text" wicket:id="surname" id="surname" /></span></td>
+									</tr>
+
+									<tr class="inputRow">
+										<td class="label"><label wicket:id="loginLabel"></label></td>
+										<td><span wicket:id="loginAsterix"><input
+											type="text" wicket:id="login" id="login /></span><img
+											src="img/help.gif"
+											onmouseover="Tip('Vložte Vaše prihlasovacie meno do aplikácie.')"
+											onmouseout="UnTip()" alt="Pomoc" /></td>
+									</tr>
+
+									<tr class="inputRow">
+										<td class="label"><label wicket:id="emailLabel"></label></td>
+										<td><span wicket:id="emailAsterix"><input
+											type="text" wicket:id="email" id="email" /></span>
+											<img
+											src="img/help.gif"
+											onmouseover="Tip('Vložte Váš používaný email, ktorý sa použije v prípade zabudnutia hesla.')"
+											onmouseout="UnTip()" alt="Pomoc" /></td>
+									</tr>
+
+									<tr class="inputRow">
+										<td class="label"><label wicket:id="townLabel"></label></td>
+										<td><input wicket:id="town"></input></td>
+									</tr>
+									
+									<tr class="inputRow">
+										<td class="label"><label wicket:id="countyLabel"></label></td>
+										<td><select wicket:id="county"></select></td>
+									</tr>
+
+									<tr class="inputRow">
+										<td class="label"><label wicket:id="handicapTypeLabel"></label></td>
+										<td><select wicket:id="handicapType">
+										</select></td>
+									</tr>
+
+									<tr class="inputRow">
+										<td class="label"><label wicket:id="preferRegionLabel"></label></td>
+										<td><input type="checkbox" wicket:id="preferRegion" />
+										<img
+											src="img/help.gif"
+											onmouseover="Tip('Pokiaľ chcete, aby Ste videli pri prezeraní portálu informácie z Vášho regiónu, zaškrtnite políčko.')"
+											onmouseout="UnTip()" alt="Pomoc" /></td>
+									</tr>
+
+
+									<tr class="inputRow">
+										<td class="label"><label wicket:id="passwordLabel"></label></td>
+										<td><span wicket:id="passwordAsterix"><input
+											type="password" wicket:id="password" id="password" /></span></td>
+									</tr>
+
+									<tr class="inputRow">
+										<td class="label"><label wicket:id="passwordAgainLabel"></label></td>
+										<td><span wicket:id="passwordAgainAsterix"><input
+											type="password" wicket:id="passwordAgain" id="passwordAgain" /></span></td>
+									</tr>
+
+									<tr class="inputRow">
+										<td class="submit" colspan="2"><input type="submit" wicket:id="submit"
+											value="Registrovať" /></td>
+									</tr>
+									<tr>
+										<td class="submit" colspan="2">
+											Údaje označené hviezdičkou (*) sú povinné.
+										</td>
+									</tr>
+									</form>
+								</table>
+								<DIV id="keyboard"></DIV>
+								</td>
+							</tr>
+						</table>
+						</td>
+					</tr>
+				</table>
+
+
+				</td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+</table>
+</body>
+</html>

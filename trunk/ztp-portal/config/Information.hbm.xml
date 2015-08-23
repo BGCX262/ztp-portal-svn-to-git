@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="sk.stuba.fiit.ztpPortal.databaseModel.Information" table="INFORMATION">
+       <id column="ID" name="id" unsaved-value="null">
+           <generator class="native"/>
+       </id>
+
+	   <property column="IMPORT_DATE" name="createDate" type="date"/>
+	   <property column="CHANGE_DATE" name="changeDate" type="date"/>
+	   <property column="STATE" name="state"/>
+	   <property column="ACTIVE" name="active"/>
+	   <property column="CONTENT" name="cmsContent"/>
+	   <property column="NAME" name="name"/>
+	   <many-to-one column="user_id" name="owner" lazy="false"/>
+       
+	</class>
+	
+</hibernate-mapping>

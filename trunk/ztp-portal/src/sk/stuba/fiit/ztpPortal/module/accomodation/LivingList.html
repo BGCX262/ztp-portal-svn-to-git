@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<wicket:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="keywords" content="ZŤP, zdravotne ťažko postihnutý, ubytovanie">
+	<title>ZTP Portál - ubytovanie</title>
+	<script type="text/javascript" src="javascript/mojozoom.js"></script>
+	<link type="text/css" href="mojozoom.css" rel="stylesheet" />
+
+	<SCRIPT type="text/javascript" src="javascript/fontResizer.js"></SCRIPT>
+	<SCRIPT type="text/javascript" src="javascript/vkboard2.js"></SCRIPT>
+	<SCRIPT type="text/javascript" src="javascript/virtualKeyboard.js"></SCRIPT>
+
+</wicket:head>
+<body>
+<SCRIPT type="text/javascript" src="javascript/wz_tooltip.js"></SCRIPT>
+<div wicket:id="headerPanel">headerPanel</div>
+
+<div wicket:id="feedback">User Feedback</div>
+<br />
+<a name="top"></a>
+<table class="centerWrapper">
+	<tr>
+		<td>
+		<table class="outerNavigationPanelBorder" ALIGN="LEFT">
+			<tr>
+				<td valign="top">
+				<table class="interNavigationPanel" ALIGN="LEFT">
+				<tr>
+				<td>
+					<a wicket:id="newEventLink" href="#">Nové ubytovanie</a></td>
+					</tr>
+				</table>
+				</td>
+			</tr>
+		</table>
+		</td>
+
+		<td></td>
+
+		<td>
+		<table class="outerMainContentBorder">
+			<tr>
+				<td>
+				<table class="mainContent">
+					<tr>
+						<td>
+						<table class="whereIam">
+							<tr>
+								<td>Domov > Zoznam ponúk ubytovaní</td>
+								<td><A href="javascript:keyb_change()"
+									onclick=
+	javascript: blur();
+id="switch"><img
+									src="img/klavesnica.png" border="0" alt="Virtuálna klávesnica" /></A></td>
+								<td id="sizeController"><b><a href="javascript:decreaseFontSize();">&#709;</a> A
+								<a href="javascript:increaseFontSize();">&#708;</a></b></td>
+							</tr>
+						</table>
+						</td>
+					</tr>
+					<tr>
+						<td>
+						<table class="pageContent">
+							
+							<tr>
+								<td>
+							<wicket:container wicket:id="cmsContent"></wicket:container>
+								</td>
+							</tr>
+							<tr>
+								<td>
+								<form wicket:id="filter-form" class="filterDatatable"> 
+								 <input type="hidden" name="tracker" wicket:id="focus-tracker"/> 
+								 <table class="dataTable" cellspacing="0" wicket:id="datatable"></table>
+								 <span wicket:id="focus-restore">[call to focus restore script]</span> 
+								</form>
+								</td>
+							</tr>
+							<tr>
+								<td>
+								<DIV id="keyboard"></DIV>
+								</td>
+							</tr>
+							<tr>
+								<td>
+								</td>
+							</tr>
+						</table>
+						</td>
+					</tr>
+				</table>
+				</td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+</table>
+</body>
+</html>

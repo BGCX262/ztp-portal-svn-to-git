@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>.:Administrácia:. Detail používateľa</title>
+</head>
+<body>
+
+<table border="1" width="1024px">
+	<tr>
+		<td>Administrácia</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><label wicket:id="profileNameInfo"></label></td>
+		<td><a wicket:id="logoutLink">Odhlásenie</a></td>
+	</tr>
+</table>
+
+<table border="1" width="1024px">
+	<tr>
+		<td style="width: 15%">
+			<table>
+				<tr>
+					<td><a wicket:id="userListLink">Zoznam používateľov</a></td>
+				</tr>
+			</table>
+		</td>
+		<td>
+
+<form wicket:id="registrationForm">
+
+<table border="1" align="center">
+
+<tr>
+<td><label wicket:id="nameLabel"></label></td>
+<td><input type="text" wicket:id="name" id="name" /></td>
+</tr>
+
+<tr>
+<td><label wicket:id="surnameLabel"></label></td>
+<td><input type="text" wicket:id="surname" id="surname" /></td>
+</tr>
+
+<tr>
+<td><label wicket:id="loginLabel"></label></td>
+<td><input type="text" wicket:id="login" id="login /></td>
+</tr>
+
+<tr>
+<td><label wicket:id="emailLabel"></label></td>
+<td><input type="text" wicket:id="email" id="email" /></td>
+</tr>
+
+<tr>
+<td><label wicket:id="regionLabel"></label></td>
+<td><input type="text" wicket:id="region" id="region" /></td>
+
+</tr>
+
+<tr>
+<td><label wicket:id="townLabel"></label></td>
+<td><input type="text" wicket:id="town" id="town" /></td>
+</tr>
+
+<tr>
+<td><label wicket:id="handicapTypeLabel"></label></td>
+<td><input type="text" wicket:id="handicapType" id="handicapType" /></td>
+</tr>
+
+<tr>
+<td><label wicket:id="statusLabel"></label></td>
+<td><input type="checkbox" wicket:id="status" /></td>
+</tr>
+
+<tr>
+<td><label wicket:id="adminLabel"></label></td>
+<td><input type="checkbox" wicket:id="admin" /></td>
+</tr>
+
+<tr>
+<td><label wicket:id="registrationDateLabel"></label></td>
+<td><label wicket:id="userRegistrationDateLabel"></label></td>
+</tr>
+
+<tr>
+<td><label wicket:id="lastChangeDateLabel"></label></td>
+<td><label wicket:id="userLastChangeDateLabel"></label></td>
+</tr>
+
+<tr>
+<td><label wicket:id="passwordLabel"></label></td>
+<td><input type="password" wicket:id="password" id="password" /></td>
+</tr>
+
+<tr>
+<td><label wicket:id="passwordAgainLabel"></label></td>
+<td><input type="password" wicket:id="passwordAgain" id="passwordAgain" /></td>
+</tr>
+
+<tr>
+<td colspan="2">
+<input type="submit" wicket:id="submit" value="Uložiť" />
+</td>
+</tr>
+</table>
+
+</form>
+</td>
+</tr>
+</table>
+<span wicket:id="feedback">feedbackmessages will be put here</span>
+
+
+</body>
+</html>

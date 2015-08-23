@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="sk.stuba.fiit.ztpPortal.databaseModel.RegisteredUser" table="REGISTEREDUSER">
+       <id column="ID" name="id" unsaved-value="null">
+           <generator class="native"/>
+       </id>
+
+ 	   <property column="NAME" name="name"/>
+       <property column="SURNAME" name="surname"/>
+       <property column="LOGIN" name="login" lazy="false"/>
+       <property column="PASSWORD" name="password"/>
+       <property column="EMAIL" name="email"/>
+       <property column="TOWN" name="town"/>
+       <many-to-one column="REGION" name="county" lazy="false"/>
+       <many-to-one column="HANDICAPTYPE" name="handicapType" lazy="false"/>
+       <property column="ADMIN" name="admin"/>     
+       <property column="STATE" name="state"/> 
+       <property column="CHANGEDATE" name="changeDate" type="date"/> 
+       <property column="REGISTRATIONDATE" name="registrationDate" type="date"/> 
+       <property column="PREFERREGION" name="preferRegion"/> 
+       
+         
+       
+	</class>
+	
+</hibernate-mapping>

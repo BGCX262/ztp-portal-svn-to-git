@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>.:Administrácia:. Zoznam udalostí</title>
+<link rel="stylesheet" type="text/css" href="style/adminStyle.css" />
+</head>
+<body>
+
+<table class="adminHeader">
+	<tr class="mainHeader">
+		<td colspan="2">Administrácia</td>
+	</tr>
+	<tr>
+		<td class="profileNameInfo"><label wicket:id="profileNameInfo"></label></td>
+		<td class="logoutLink"><a wicket:id="logoutLink">Odhlásenie</a></td>
+	</tr>
+</table>
+
+<table class="main">
+	<tr>
+		<td class="navigationPanel">
+			<div wicket:id="panel">this gets replaced</div>
+		</td>
+		<td class="contentPanel">
+		<table class="mainContent">
+			<tr>
+				<td>
+				<form wicket:id="school-filter-form" class="filterDatatable"><input
+					type="hidden" name="tracker" wicket:id="focus-tracker" />
+				<table class="eventListDataTable" cellspacing="0"
+					wicket:id="schoolDatatable"></table>
+				<span wicket:id="focus-restore">[call to focus restore
+				script]</span></form>
+				</td>
+			</tr>
+			<tr>
+				<td>
+				<form wicket:id="course-filter-form" class="filterDatatable"><input
+					type="hidden" name="tracker" wicket:id="focus-tracker" />
+				<table class="eventListDataTable" cellspacing="0"
+					wicket:id="courseDatatable"></table>
+				<span wicket:id="focus-restore">[call to focus restore
+				script]</span></form>
+				</td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+</table>
+
+
+</body>
+</html>

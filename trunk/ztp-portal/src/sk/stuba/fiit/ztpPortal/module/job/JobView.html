@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<wicket:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="keywords" content="ZŤP, zdravotne ťažko postihnutý, informácie, práca">
+	<title>ZŤP Portál - Detail inzerátu</title>
+
+	<SCRIPT type="text/javascript" src="javascript/fontResizer.js"></SCRIPT>
+	<SCRIPT type="text/javascript" src="javascript/vkboard2.js"></SCRIPT>
+	<SCRIPT type="text/javascript" src="javascript/virtualKeyboard.js"></SCRIPT>
+
+</wicket:head>
+<body>
+<SCRIPT type="text/javascript" src="javascript/wz_tooltip.js"></SCRIPT>
+<div wicket:id="headerPanel">headerPanel</div>
+
+<span wicket:id="feedback">User Feedback</span>
+
+<br />
+<table class="centerWrapper">
+	<tr>
+		<td valign="top">
+		<table class="outerNavigationPanelBorder" ALIGN="LEFT">
+			<tr>
+				<td valign="top">
+				<table class="interNavigationPanel" ALIGN="LEFT">
+					<tr>
+						<td><a wicket:id="newJobLink">Nová ponuka</a></td>
+					</tr>
+					<tr>
+						<td valign="top"><a wicket:id="jobListLink">Zoznam ponúk</a></td>
+					</tr>
+				</table>
+				</td>
+			</tr>
+		</table>
+
+		</td>
+		<td></td>
+		<td>
+
+		<table class="outerMainContentBorder" ALIGN="LEFT">
+			<tr>
+				<td>
+
+				<table class="mainContent">
+					<tr>
+						<td>
+						<table class="whereIam">
+							<tr>
+								<td>Zamestnanie > Informácia</td>
+								<td><A href="javascript:keyb_change()"
+									onclick="javascript:blur()" id="switch"><img
+									src="img/klavesnica.png" border="0" alt="Virtuálna klávesnica" /></A></td>
+								<td id="sizeController"><b><a
+									href="javascript:decreaseFontSize();">&#709;</a> A <a
+									href="javascript:increaseFontSize();">&#708;</a></b></td>
+							</tr>
+						</table>
+						</td>
+					</tr>
+					<tr>
+						<td>
+						<table class="pageContent">
+							<tr>
+								<td>
+								<table class="detail">
+									<form wicket:id="jobDetailForm">
+
+									<tr class="inputRow">
+										<td><label wicket:id="advertTypeLabel"></label></td>
+										<td><label wicket:id="advertType"></label></td>
+									</tr>
+
+									<tr class="inputRow">
+										<td><label wicket:id="specificationLabel"></label></td>
+										<td><label wicket:id="specification"></label></td>
+									</tr>
+
+									<tr class="inputRow">
+										<td><label wicket:id="startDateLabel"></label></td>
+										<td><label wicket:id="startDate"></label></td>
+									</tr>
+
+									<tr class="inputRow">
+										<td><label wicket:id="hourPaymentLabel"></label></td>
+										<td><label wicket:id="hourPayment"></label></td>
+									</tr>
+
+									<tr class="inputRow">
+										<td><label wicket:id="workDurationLabel"></label></td>
+										<td><label wicket:id="workDuration"></label></td>
+									</tr>
+
+									<tr class="inputRow">
+										<td><label wicket:id="countryLabel"></label></td>
+										<td><label wicket:id="country"></label></td>
+									</tr>
+
+									<tr class="inputRow">
+										<td><label wicket:id="countyLabel"></label></td>
+										<td><label wicket:id="county"></label></td>
+									</tr>
+
+									<tr class="inputRow">
+										<td><label wicket:id="townLabel"></label></td>
+										<td><label wicket:id="town"></label></td>
+									</tr>
+
+									<tr class="inputRow">
+										<td><label wicket:id="sectorLabel"></label></td>
+										<td><label wicket:id="sector"></label></td>
+									</tr>
+
+									<tr class="inputRow">
+										<td><label wicket:id="contractLabel"></label></td>
+										<td><label wicket:id="contract"></label></td>
+									</tr>
+
+									<tr class="inputRow">
+										<td colspan="2"><wicket:container wicket:id="cmsContent"></wicket:container></td>
+									</tr>
+
+									</form>
+								</table>
+								</td>
+							</tr>
+						</table>
+						</td>
+					</tr>
+				</table>
+
+
+				</td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+</table>
+</body>
+</html>

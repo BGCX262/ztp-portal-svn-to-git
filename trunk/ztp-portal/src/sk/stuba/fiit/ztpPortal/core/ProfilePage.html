@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<wicket:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Môj profil</title>
+
+	<SCRIPT type="text/javascript" src="javascript/fontResizer.js"></SCRIPT>
+	<SCRIPT type="text/javascript" src="javascript/vkboard2.js"></SCRIPT>
+	<SCRIPT type="text/javascript" src="javascript/virtualKeyboard.js"></SCRIPT>
+
+</wicket:head>
+<body>
+<SCRIPT type="text/javascript" src="javascript/wz_tooltip.js"></SCRIPT>
+<div wicket:id="headerPanel">headerPanel</div>
+<div wicket:id="feedback">User Feedback</div>
+
+<br />
+
+<table class="centerWrapper">
+	<tr>
+		<td>
+
+		<table class="coreMainPage">
+			<tr>
+				<td>
+				<form wicket:id="userDetailForm">
+
+				<table class="registration" align="center">
+
+					<tr>
+						<td class="label"><label wicket:id="nameLabel"></label></td>
+						<td><span wicket:id="border"> <input type="text"
+							wicket:id="name" id="name" /> </span></td>
+					</tr>
+
+					<tr>
+						<td class="label"><label wicket:id="surnameLabel"></label></td>
+						<td><input type="text" wicket:id="surname" id="surname" /></td>
+					</tr>
+
+					<tr>
+						<td class="label"><label wicket:id="loginLabel"></label></td>
+						<td><input type="text" wicket:id="login" id="login /></td>
+					</tr>
+
+					<tr>
+						<td class="label"><label wicket:id="emailLabel"></label></td>
+						<td><input type="text" wicket:id="email" id="email" /></td>
+					</tr>
+
+					<tr>
+						<td class="label"><label wicket:id="townLabel"></label></td>
+						<td><input wicket:id="town"> </input></td>
+					</tr>
+
+					<tr>
+						<td class="label"><label wicket:id="countyLabel"></label></td>
+						<td><select wicket:id="county">
+						</select></td>
+					</tr>
+
+					<tr class="inputRow">
+						<td class="label"><label wicket:id="handicapTypeLabel"></label></td>
+						<td><select wicket:id="handicapType">
+						</select></td>
+					</tr>
+
+					<tr>
+						<td class="label"><label wicket:id="preferRegionLabel"></label></td>
+						<td><input type="checkbox" wicket:id="preferRegion" /> <img
+							src="img/help.gif"
+							onmouseover="Tip('Pokiaľ chcete, aby Ste videli pri prezeraní portálu informácie z Vášho regiónu, zaškrtnite políčko.')"
+							onmouseout="UnTip()" alt="Pomoc" /></td>
+					</tr>
+
+					<tr>
+						<td class="label"><label wicket:id="registrationDateLabel"></label></td>
+						<td><label wicket:id="userRegistrationDateLabel"></label></td>
+					</tr>
+
+					<tr>
+						<td class="label"><label wicket:id="passwordLabel"></label></td>
+						<td><input type="password" wicket:id="password" id="password" /></td>
+					</tr>
+
+					<tr>
+						<td class="label"><label wicket:id="passwordAgainLabel"></label></td>
+						<td><input type="password" wicket:id="passwordAgain"
+							id="passwordAgain" /></td>
+					</tr>
+
+					<tr>
+						<td class="submit" colspan="2"><input type="submit"
+							wicket:id="submit" value="Uložiť" /></td>
+					</tr>
+					<tr>
+						<td class="submit" colspan="2"><input type="submit"
+							wicket:id="deactivateButton" value="Zmazať profil" />
+							<img src="img/help.gif"
+											onmouseover="Tip('Pozor! Pri zmazaní Vášho profilu nebudete mať možnosť opätovného prihlásenia. Vaše príspevky môžu zostať stále aktívne.')"
+											onmouseout="UnTip()" alt="Pomoc" /></td>
+					</tr>
+				</table>
+
+				</form>
+				</td>
+			</tr>
+		</table>
+
+		</td>
+	</tr>
+</table>
+
+
+
+</body>
+</html>

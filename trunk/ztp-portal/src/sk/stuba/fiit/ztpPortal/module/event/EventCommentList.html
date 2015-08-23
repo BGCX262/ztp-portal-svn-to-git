@@ -1,0 +1,165 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<wicket:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="keywords" content="ZŤP, zdravotne ťažko postihnutý, komentáre, udalosti">
+	<title>ZTP Portál - Komentáre k udalosti</title>
+	<script type="text/javascript" src="javascript/mojozoom.js"></script>
+	<link type="text/css" href="mojozoom.css" rel="stylesheet" />
+
+	<SCRIPT type="text/javascript" src="javascript/fontResizer.js"></SCRIPT>
+	<SCRIPT type="text/javascript" src="javascript/vkboard2.js"></SCRIPT>
+	<SCRIPT type="text/javascript" src="javascript/virtualKeyboard.js"></SCRIPT>
+
+	<script type="text/javascript">
+	window.onload = function() {
+		var newComment = document.getElementById("commentForm");
+			newComment.style.display = "none";
+			
+<!--		if (newComment.value != "") {-->
+<!--			var commentLabel = document.getElementById("addNewComment");-->
+<!--			commentLabel.style.display = "none";-->
+<!--			}-->
+	}
+
+	function showCommentForm() {
+		var newComment = document.getElementById("commentForm");
+		var commentLabel = document.getElementById("addNewComment");
+		newComment.style.display = "inline";
+		commentLabel.style.display = "none";
+	}
+</script>
+
+</wicket:head>
+<body>
+<SCRIPT type="text/javascript" src="javascript/wz_tooltip.js"></SCRIPT>
+<div wicket:id="headerPanel">headerPanel</div>
+
+<div wicket:id="feedback">User Feedback</div>
+
+<br />
+<a name="top"></a>
+<table class="centerWrapper">
+	<tr>
+		<td>
+		<table class="outerNavigationPanelBorder" ALIGN="LEFT">
+			<tr>
+				<td valign="top">
+				<table class="interNavigationPanel" ALIGN="LEFT">
+					<tr>
+						<td><a wicket:id="eventListLink" href="#">Zoznam udalostí</a></td>
+					</tr>
+					<tr>
+						<td><a wicket:id="newEventLink">Vložiť novú udalosť</a></td>
+					</tr>
+					<tr>
+						<td><a wicket:id="pictureView">Fotogaléria</a></td>
+					</tr>
+				</table>
+				</td>
+			</tr>
+		</table>
+		</td>
+
+		<td></td>
+
+		<td>
+		<table class="outerMainContentBorder">
+			<tr>
+				<td>
+				<table class="mainContent">
+					<tr>
+						<td>
+						<table class="whereIam">
+							<tr>
+								<td>Udalosti > <label wicket:id="themeLabel"></label> > <label
+									wicket:id="threadLabel"></label></td>
+								<td><A href="javascript:keyb_change()"
+									onclick=
+	javascript: blur();
+id="switch"><img
+									src="img/klavesnica.png" border="0" alt="Virtuálna klávesnica" /></A></td>
+								<td id="sizeController"><b><a href="javascript:decreaseFontSize();">&#709;</a> A
+								<a href="javascript:increaseFontSize();">&#708;</a></b></td>
+							</tr>
+						</table>
+						</td>
+					</tr>
+					<tr>
+						<td>
+						<table class="pageContent">
+							<tr>
+								<td id="addNewComment"><a href="javascript:showCommentForm()" onClick=javascript: showCommentForm();> Vložiť nový príspevok</a></td>
+							</tr>
+							<tr>
+								<td>
+								<form wicket:id="commentForm">
+								<table class="commentForm" id="commentForm">
+									<tr>
+									</tr>
+									<tr>
+										<td><label wicket:id="nameLabel"></label></td>
+									</tr>
+									<tr>
+										<td><textarea wicket:id="name" cols="60" rows="6"></textarea></td>
+									</tr>
+									<tr>
+										<td colspan="2"><input type="submit" wicket:id="submit"
+											value="Pridať môj komentár" /></td>
+									</tr>
+								</table>
+								</form>
+								</td>
+							</tr>
+							<tr>
+								<td>
+								<DIV id="keyboard"></DIV>
+								</td>
+							</tr>
+							<tr>
+								<td>
+								<table class="commentList">
+									<tr>
+										<td>
+										<div wicket:id="navigator"></div>
+										<span wicket:id="threadLabelName"></span> <br>
+										<br>
+										<div wicket:id="commentListView" class="commentListView"
+											id="commentListView">
+										<table class="commentItem">
+											<tr>
+												<td wicket:id="commentAuthor"></td>
+												<td colspan="2" wicket:id="commentCreateDate"
+													class="commentCreateDate"></td>
+											</tr>
+
+											<tr>
+												<td colspan="3" wicket:id="commentName" class="commentName"></td>
+											</tr>
+											<tr>
+												<td width="40%"><a wicket:id="noticeLink" href="#">Nahlásiť</a></td>
+												<td width="40%"><a wicket:id="deactivate" href="#">Zmazať
+												komentár</a></td>
+												<td width="10%"><a href="#top">&#94;</a></td>
+											</tr>
+
+										</table>
+										<br />
+										</div>
+										</td>
+									</tr>
+								</table>
+								</td>
+							</tr>
+						</table>
+						</td>
+					</tr>
+				</table>
+				</td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+</table>
+</body>
+</html>

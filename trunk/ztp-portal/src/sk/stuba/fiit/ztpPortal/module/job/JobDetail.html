@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<wicket:head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="keywords" content="ZŤP, zdravotne ťažko postihnutý, informácie, práca,">
+<title>ZŤP Portál - Pridanie pracovného inzerátu</title>
+
+	<SCRIPT type="text/javascript" src="javascript/fontResizer.js"></SCRIPT>
+	<SCRIPT type="text/javascript" src="javascript/vkboard2.js"></SCRIPT>
+	<SCRIPT type="text/javascript" src="javascript/virtualKeyboard.js"></SCRIPT>
+
+</wicket:head>
+
+<body>
+<SCRIPT type="text/javascript" src="javascript/wz_tooltip.js"></SCRIPT>
+<div wicket:id="headerPanel">headerPanel</div>
+
+<span wicket:id="feedback">User Feedback</span>
+
+<br />
+<table class="centerWrapper">
+	<tr>
+		<td valign="top">
+		<table class="outerNavigationPanelBorder" ALIGN="LEFT">
+			<tr>
+				<td valign="top">
+				<table class="interNavigationPanel" ALIGN="LEFT">
+					<tr>
+						<td valign="top"><a wicket:id="jobListLink">Zoznam ponúk</a></td>
+					</tr>
+				</table>
+			</td>
+			</tr>
+		</table>
+
+		</td>
+		<td></td>
+		<td>
+
+		<table class="outerMainContentBorder" ALIGN="LEFT">
+			<tr>
+				<td>
+
+				<table class="mainContent">
+					<tr>
+						<td>
+						<table class="whereIam">
+							<tr>
+								<td>Zamestnanie > Nová ponuka</td>
+								<td><A href="javascript:keyb_change()"
+									onclick="javascript:blur()" id="switch"><img
+									src="img/klavesnica.png" border="0" alt="Virtuálna klávesnica" /></A></td>
+								<td id="sizeController"><b><a href="javascript:decreaseFontSize();">&#709;</a> A
+								<a href="javascript:increaseFontSize();">&#708;</a></b></td>
+							</tr>
+						</table>
+						</td>
+					</tr>
+					<tr>
+						<td>
+						<table class="pageContent">
+							<tr>
+								<td>
+
+								<table class="detail">
+									<form wicket:id="jobDetailForm">
+									
+									<tr class="inputRow">
+										<td><label wicket:id="advertTypeLabel"></label></td>
+										<td><span wicket:id="advertTypeAsterix"><select wicket:id="advertType">
+										</select></span></td>
+									</tr>
+									
+									<tr class="inputRow">
+										<td><label wicket:id="specificationLabel"></label></td>
+										<td><span wicket:id="specificationAsterix"><input type="text" wicket:id="specification"
+											id="specification" /></span>
+										<img
+											src="img/help.gif"
+											onmouseover="Tip('Vložte výstižný názov práce \(max. 30 znakov\).')"
+											onmouseout="UnTip()" alt="Pomoc" />
+										</td>
+									</tr>
+
+									<tr class="inputRow">
+										<td><label wicket:id="startDateLabel"></label></td>
+										<td><input type="text" wicket:id="startDate"
+											id="startDate" />
+										<img
+											src="img/help.gif"
+											onmouseover="Tip('Vložte dátum nástupu do práce \(dátum nemôže byť dnešný a starší\).')"
+											onmouseout="UnTip()" alt="Pomoc" />
+										</td>
+									</tr>
+									
+									<tr class="inputRow">
+										<td><label wicket:id="hourPaymentLabel"></label></td>
+										<td><span wicket:id="hourPaymentAsterix"><input type="text" wicket:id="hourPayment"
+											id="hourPayment" /></span>
+										<img
+											src="img/help.gif"
+											onmouseover="Tip('Vložte hodinovú mzdu \(mzda musí byť číslo\).')"
+											onmouseout="UnTip()" alt="Pomoc" />
+										</td>
+									</tr>
+
+									<tr class="inputRow">
+										<td><label wicket:id="workDurationLabel"></label></td>
+										<td><span wicket:id="workDurationAsterix"><input type="text" wicket:id="workDuration"
+											id="workDuration" /></span>
+										<img
+											src="img/help.gif"
+											onmouseover="Tip('Vložte dĺžku trvania práce v dňoch  \(musí byť číslo\).')"
+											onmouseout="UnTip()" alt="Pomoc" />
+										</td>
+									</tr>
+									
+									<tr class="inputRow">
+										<td><label wicket:id="countyLabel"></label></td>
+										<td><select wicket:id="country"></select></td>
+									</tr>
+									
+									<tr class="inputRow">
+										<td><label wicket:id="countryLabel"></label></td>
+										<td><select wicket:id="county"></select></td>
+									</tr>
+
+									<tr class="inputRow">
+										<td><label wicket:id="townLabel"></label></td>
+										<td><span wicket:id="townAsterix"><input wicket:id="town">
+										</input></span></td>
+									</tr>
+
+									<tr class="inputRow">
+										<td><label wicket:id="sectorLabel"></label></td>
+										<td><span wicket:id="sectorAsterix"><select wicket:id="sector">
+										</select></span></td>
+									</tr>
+									
+									<tr class="inputRow">
+										<td><label wicket:id="contractLabel"></label></td>
+										<td><span wicket:id="contractAsterix"><select wicket:id="contract">
+										</select></span></td>
+									</tr>
+									
+									<tr>
+										<td colspan="2">
+											<textarea wicket:id="richTextInput" rows="10" cols="60"></textarea>
+										</td>
+									</tr>
+									<tr>
+										<td colspan="2"><input type="submit" wicket:id="submit"
+											value="Uložiť" /></td>
+									</tr>
+									</form>
+								</table>
+								<DIV id="keyboard"></DIV>
+								</td>
+							</tr>
+						</table>
+						</td>
+					</tr>
+				</table>
+				</td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+</table>
+<br clear=left>
+
+
+</body>
+</html>

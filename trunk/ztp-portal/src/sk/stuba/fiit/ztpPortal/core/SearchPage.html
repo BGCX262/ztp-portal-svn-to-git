@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<wicket:head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="keywords" content="ZŤP, zdravotne ťažko postihnutý, vyhľadávanie">
+<title>ZTP Portál - Vaša cesta k informáciám</title>
+<script type="text/javascript" src="javascript/mojozoom.js"></script>  
+<link type="text/css" href="mojozoom.css" rel="stylesheet" />  
+
+<script>
+window.onload = function() {	
+	var checked = true;
+	var col = document.getElementsByTagName("INPUT");
+	for ( var i = 0; i < col.length; i++) {
+		col[i].checked = checked;
+	}
+}
+
+</script>
+
+<script language="javascript">
+	function checkAll(master) {
+		var checked = master.checked;
+		var col = document.getElementsByTagName("INPUT");
+		for ( var i = 0; i < col.length; i++) {
+			col[i].checked = checked;
+		}
+	}
+</script>
+
+
+</wicket:head>
+<body>
+<SCRIPT type="text/javascript" src="javascript/wz_tooltip.js"></SCRIPT>
+<div wicket:id="headerPanel">headerPanel</div>
+
+<div wicket:id="feedback">User Feedback</div>
+
+<table class="centerWrapper">
+<tr>
+<td>
+
+<table class="coreMainPage">
+	<tr>
+		<td>
+			<table class="interCoreMainPage">
+			<tr>
+			<td>
+<!--			<wicket:container wicket:id="cmsContent"></wicket:container>-->
+			</td>
+			</tr>
+			<tr>
+				<td>
+					<table>
+					<form wicket:id="searchFormInput">
+						<tr>
+							<td>
+								<b>Hľadaný text</b>
+							</td>
+							<td>
+								<input type="text" wicket:id="searchTextField" id="searchTextField"/>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2"> 
+								<b>Miesta hľadania</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<input type="checkbox" wicket:id="portalContentCheckBox" id="searchSelect"/>
+								<label wicket:id="portalContentLabel"></label>
+							</td>
+							<td>
+								<input type="checkbox" wicket:id="jobCheckBox" id="searchSelect"/>
+								<label wicket:id="jobLabel"></label>
+							</td>
+							<td>
+								<input type="checkbox" wicket:id="livingCheckBox" id="searchSelect"/>							
+								<label wicket:id="livingLabel"></label>
+							</td>
+							<td>
+								<input type="checkbox" wicket:id="healthAidCheckBox" id="searchSelect" />
+								<label wicket:id="healthAidLabel"></label>							
+							</td>
+							<td>
+								<input type="checkbox" wicket:id="dayCareCheckBox" id="searchSelect" />							
+								<label wicket:id="dayCareLabel"></label>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								
+							</td>
+							<td>
+								<input type="checkbox" wicket:id="commentCheckBox" id="searchSelect"/>							
+								<label wicket:id="commentLabel"></label>
+							</td>
+							<td>
+								<input type="checkbox" wicket:id="eventCheckBox" id="searchSelect"/>							
+								<label wicket:id="eventLabel"></label>
+							</td>
+							<td>
+								<input type="checkbox" wicket:id="educationCheckBox" id="searchSelect" />							
+								<label wicket:id="educationLabel"></label>
+							</td>
+							<td>
+								<input type="checkbox" wicket:id="informationCheckBox" id="searchSelect" />							
+								<label wicket:id="informationLabel"></label>
+							</td>
+
+						</tr>
+						<tr>
+							<td>
+								<b>Zvoliť všetko</b>
+								<input type="checkbox" onclick="checkAll(this)"><br>
+                            </td>
+						</tr>
+						<tr>
+							<td>
+								<input type="submit" wicket:id="submit" value="Hľadať" />
+							</td>
+						</tr>
+					</form>
+					</table>
+				</td>
+			</tr>
+			<tr>
+			<td>
+			<hr>
+			<table class="searchResultList" id="searchResultList">
+			<tr>
+				<td>
+					<b><label wicket:id="searchResult"></label></b>
+				</td>
+			</tr>
+			<tr>
+				<td class="searchResultList">
+				<table class="searchResultList">
+					<div wicket:id="searchResultList" class="searchResultList" id="searchResultList">               
+		            	<tr>
+		            		<td wicket:id="module"></td>
+		            		<td wicket:id="text"></td>
+		            		
+		            		<td><a wicket:id="detail" href="#">Zobraz</a></td>
+		            	</tr>                               
+		         	</div>
+		         </table>          
+		         </td>
+			</tr>
+			</table>
+			
+			
+			</td>
+			</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+
+</td>
+</tr>
+</table>
+
+</body>
+</html>

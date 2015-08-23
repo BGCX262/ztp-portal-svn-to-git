@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<wicket:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="keywords" content="ZŤP, zdravotne ťažko postihnutý, pomôcka">
+	<title>ZTP Portál - Pomôcky - pridanie</title>
+	<script type="text/javascript" src="javascript/mojozoom.js"></script>
+	<link type="text/css" href="mojozoom.css" rel="stylesheet" />
+
+	<SCRIPT type="text/javascript" src="javascript/fontResizer.js"></SCRIPT>
+	<SCRIPT type="text/javascript" src="javascript/vkboard2.js"></SCRIPT>
+	<SCRIPT type="text/javascript" src="javascript/virtualKeyboard.js"></SCRIPT>
+
+</wicket:head>
+<body>
+<SCRIPT type="text/javascript" src="javascript/wz_tooltip.js"></SCRIPT>
+<div wicket:id="headerPanel">headerPanel</div>
+<div wicket:id="feedback">User Feedback</div>
+
+<br />
+<a name="top"></a>
+<table class="centerWrapper">
+	<tr>
+		<td>
+		<table class="outerNavigationPanelBorder" ALIGN="LEFT">
+			<tr>
+				<td valign="top">
+				<table class="interNavigationPanel" ALIGN="LEFT">
+					<tr>
+						<td>
+						<a wicket:id="healthAidListLink" href="#">Zoznam zdravotných pomôcok</a>
+						</td>
+					</tr>
+				</table>
+				</td>
+			</tr>
+		</table>
+		</td>
+
+		<td></td>
+
+		<td>
+		<table class="outerMainContentBorder">
+			<tr>
+				<td>
+				<table class="mainContent">
+					<tr>
+						<td>
+						<table class="whereIam">
+							<tr>
+								<td>Domov > Vkladanie novej pomôcky</td>
+								<td><A href="javascript:keyb_change()"
+									onclick=
+	javascript: blur();
+id="switch"><img
+									src="img/klavesnica.png" border="0" alt="Virtuálna klávesnica" /></A></td>
+								<td id="sizeController"><b><a href="javascript:decreaseFontSize();">&#709;</a> A
+								<a href="javascript:increaseFontSize();">&#708;</a></b></td>
+							</tr>
+						</table>
+						</td>
+					</tr>
+					<tr>
+						<td>
+						<table class="pageContent">
+							
+							<tr>
+								<td>
+									<table class="detail">
+									<form wicket:id="eventDetailForm">
+									
+									<tr class="inputRow">
+										<td><label wicket:id="nameLabel"></label></td>
+										<td><span wicket:id="nameAsterix"><input wicket:id="name">
+										</input></span>
+										<img
+											src="img/help.gif"
+											onmouseover="Tip('Vložte výstižný názov zdravotnej pomôcky \(max. 30 znakov\).')"
+											onmouseout="UnTip()" alt="Pomoc" />
+										</td>
+									</tr>
+									
+									<tr class="inputRow">
+										<td><label wicket:id="handicapTypeLabel"></label></td>
+										<td><span wicket:id="handicapTypeAsterix"><select wicket:id="handicapType">
+										</select></span></td>
+									</tr>
+									
+									<tr>
+										<td colspan="2">
+											<textarea wicket:id="richTextInput" rows="15" cols="80"></textarea>
+										</td>
+									</tr>
+									<tr>
+										<td colspan="2"><input type="submit" wicket:id="submit"
+											value="Uložiť" /></td>
+									</tr>
+									</form>
+								</table>
+								
+								
+								</td>
+							</tr>
+							<tr>
+								<td>
+								<DIV id="keyboard"></DIV>
+								</td>
+							</tr>
+							<tr>
+								<td>
+								</td>
+							</tr>
+						</table>
+						</td>
+					</tr>
+				</table>
+				</td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+</table>
+</body>
+</html>

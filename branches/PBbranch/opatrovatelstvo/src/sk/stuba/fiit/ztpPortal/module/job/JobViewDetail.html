@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+
+<script>
+	window.onload = function() {
+		var loginForm = document.getElementById("loginForm");
+		var statusForm = document.getElementById("statusForm");
+		var name = document.getElementById("login").value;
+		if (name == "")
+			statusForm.style.visibility = "hidden";
+		else
+			loginForm.style.visibility = "hidden";
+	}
+</script>
+
+</head>
+<body>
+
+<table border="1" width="1024px">
+	<tr>
+		<td width="80%">Picture</td>
+		<td width="20%">
+		<form wicket:id="loginForm">
+		<table id="loginForm" class="form" border="1">
+			<tr>
+				<td colspan="2"><label wicket:id="headerLoginLabel"></label></td>
+			</tr>
+			<tr>
+				<td class="input" colspan="2"><input type="text"
+					wicket:id="login" id="login" size="25" /></td>
+			</tr>
+			<tr>
+				<td colspan="2"><label wicket:id="headerPasswordLabel"></label></td>
+			</tr>
+			<tr>
+				<td class="input" colspan="2"><input type="password"
+					wicket:id="password" id="password" size="25" /></td>
+			</tr>
+			<tr>
+				<td><input type="submit" wicket:id="doLoginButton"
+					value="Prihlásiť" /></td>
+				<td><input type="submit" wicket:id="registrationButton"
+					value="Registrovať" /></td>
+			</tr>
+		</table>
+		<span wicket:id="doLoginFeedback">User Feedback</span></form>
+
+		<form wicket:id="statusForm">
+		<table border="1" class="form" id="statusForm">
+			<tr>
+				<td id="userName"><label wicket:id="statusLoginLabel"></label></td>
+				<td><label wicket:id="loginNameLabel"></label></td>
+			</tr>
+			<tr>
+				<td><input type="submit" wicket:id="doLogout" value="Odhlásiť" />
+				</td>
+				<td><a wicket:id="profilePageLink">Profil</a></td>
+			</tr>
+
+		</table>
+		</form>
+		</td>
+	</tr>
+</table>
+
+<table border="1" width="1024px">
+	<tr>
+		<td class="input" colspan="2"><input type="text" id="search" />
+		<input type="submit" value="Hladaj" /></td>
+		<td colspan="3"></td>
+		<td><a wicket:id="homeLink">Domov</a></td>
+		<td>Mapa stránok</td>
+		<td>Prístupnosť</td>
+	</tr>
+
+	<tr>
+		<td style="width: 12.5%">Informácie</td>
+		<td style="width: 12.5%">Udalosti</td>
+		<td style="width: 12.5%"><a wicket:id="jobList">Zamestnanie</a></td>
+		<td style="width: 12.5%">Vzdelávanie</td>
+		<td style="width: 12.5%">Ubytovanie</td>
+		<td style="width: 12.5%">Pomôcky</td>
+		<td style="width: 12.5%">Opatrovatelia</td>
+		<td style="width: 12.5%">Fórum</td>
+	</tr>
+</table>
+
+<span wicket:id="feedback">User Feedback</span>
+
+<br />
+<table border="1" style="width: 20%" ALIGN="LEFT">
+	<tr>
+		<td>
+			<a wicket:id="newJobLink">Nová ponuka</a>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<a wicket:id="jobListLink">Zoznam ponúk</a>
+		</td>
+	</tr>
+</table>
+<table border="1" style="width: 75%" ALIGN="LEFT">
+	<tr>
+		<td>
+		Zamestnanie > Úprava
+		</td>
+	</tr>
+	<tr>
+		<td>
+		
+
+			<table border="1">
+				<form wicket:id="jobDetailForm">
+				<tr>
+					<td><label wicket:id="specificationLabel"></label></td>
+					<td><input type="text" wicket:id="specification"
+						id="specification" /></td>
+				</tr>
+
+				<tr>
+					<td><label wicket:id="startDateLabel"></label></td>
+					<td><input type="text" wicket:id="startDate" id="startDate" /></td>
+				</tr>
+
+				<tr>
+					<td><label wicket:id="hourPaymentLabel"></label></td>
+					<td><input type="text" wicket:id="hourPayment"
+						id="hourPayment" /></td>
+				</tr>
+
+				<tr>
+					<td><label wicket:id="workDurationLabel"></label></td>
+					<td><input type="text" wicket:id="workDuration"
+						id="workDuration" /></td>
+				</tr>
+
+				<tr>
+					<td><label wicket:id="townLabel"></label></td>
+					<td><select wicket:id="town">
+					</select></td>
+				</tr>
+				
+				<tr>
+					<td><label wicket:id="sectorLabel"></label></td>
+					<td><select wicket:id="sector">
+					</select></td>
+				</tr>
+
+			<tr>
+					<td colspan="2"><input type="submit" wicket:id="submit" value="Ulozit" /></td>
+				</tr>
+				</form>
+			</table>
+
+		</td>
+		<td style="width: 20%">other stuff</td>
+	</tr>
+	<tr>
+	</tr>
+</table>
+<br clear=left>
+
+
+</body>
+</html>

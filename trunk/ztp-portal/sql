@@ -1,0 +1,506 @@
+create sequence hibernate_sequence;
+
+create table REGISTEREDUSER (
+
+ID int8,
+NAME varchar (255),
+SURNAME varchar (255),
+LOGIN varchar (255),
+PASSWORD varchar (255),
+EMAIL varchar (255),
+REGION int8,
+TOWN varchar (255),
+HANDICAPTYPE int8,
+ADMIN boolean,
+STATE boolean,
+CHANGEDATE timestamp,
+REGISTRATIONDATE timestamp,
+PREFERREGION boolean,
+primary key(ID));
+
+CREATE TABLE Job ( 
+	id int8 NOT NULL,
+	region varchar(255),
+	town varchar(255),
+	county int8,
+	sector integer NOT NULL,
+	position integer,
+	contract_type integer NOT NULL,
+	start_date timestamp,
+	job_specif varchar(255) NOT NULL,
+	hour_payment integer NULL,
+	work_duration integer NULL,
+	creator_id int8 NOT NULL,
+	type_of_advert integer NOT NULL,
+	import_date timestamp,
+	state boolean,
+	active boolean,
+	change_date timestamp,
+	urlLink varchar(255),
+	cms_content varchar(5000),
+	primary key(ID)
+);
+
+CREATE TABLE Country(
+id int8,
+name varchar(255),
+primary key(ID)
+);
+
+Insert into Country values( nextval('hibernate_sequence'), 'Bratislavsk˝ kraj' );
+Insert into Country values( nextval('hibernate_sequence'), 'Trnavsk˝ kraj' );
+Insert into Country values( nextval('hibernate_sequence'), 'TrenËiansky kraj' );
+Insert into Country values( nextval('hibernate_sequence'), 'Nitriansky kraj' );
+Insert into Country values( nextval('hibernate_sequence'), 'Banskobystrick˝ kraj' );
+Insert into Country values( nextval('hibernate_sequence'), 'éilinsk˝ kraj' );
+Insert into Country values( nextval('hibernate_sequence'), 'Preöovsk˝ kraj' );
+Insert into Country values( nextval('hibernate_sequence'), 'Koöick˝ kraj' );
+
+
+
+CREATE TABLE County(
+id int8,
+name varchar(255),
+country int8,
+primary key(ID)
+);
+
+Insert into County values( nextval('hibernate_sequence'), 'Bratislava', (Select id from Country where name='Bratislavsk˝ kraj') );
+Insert into County values( nextval('hibernate_sequence'), 'Bansk· Bystrica', (Select id from Country where name='Banskobystrick˝ kraj') );
+Insert into County values( nextval('hibernate_sequence'), 'Bardejov', (Select id from Country where name='Preöovsk˝ kraj') );
+Insert into County values( nextval('hibernate_sequence'), 'B·novce n/Bebravou', (Select id from Country where name='TrenËiansky kraj') );
+Insert into County values( nextval('hibernate_sequence'), 'Brezno', (Select id from Country where name='Banskobystrick˝ kraj'));
+Insert into County values( nextval('hibernate_sequence'), 'Bansk· ätiavnica', (Select id from Country where name='Banskobystrick˝ kraj') );
+Insert into County values( nextval('hibernate_sequence'), 'BytËa', (Select id from Country where name='éilinsk˝ kraj') );
+Insert into County values( nextval('hibernate_sequence'), '»adca', (Select id from Country where name='éilinsk˝ kraj') );
+Insert into County values( nextval('hibernate_sequence'), 'Doln˝ KubÌn', (Select id from Country where name='éilinsk˝ kraj') );
+Insert into County values( nextval('hibernate_sequence'), 'Dunajsk· Streda', (Select id from Country where name='Trnavsk˝ kraj') );
+Insert into County values( nextval('hibernate_sequence'), 'Detva', (Select id from Country where name='Banskobystrick˝ kraj') );
+Insert into County values( nextval('hibernate_sequence'), 'Galanta', (Select id from Country where name='Trnavsk˝ kraj') );
+Insert into County values( nextval('hibernate_sequence'), 'Gelnica', (Select id from Country where name='Koöick˝ kraj') );
+Insert into County values( nextval('hibernate_sequence'), 'Hlohovec', (Select id from Country where name='Trnavsk˝ kraj') );
+Insert into County values( nextval('hibernate_sequence'), 'HumennÈ', (Select id from Country where name='Preöovsk˝ kraj') );
+Insert into County values( nextval('hibernate_sequence'), 'Ilava', (Select id from Country where name='TrenËiansky kraj')  );
+Insert into County values( nextval('hibernate_sequence'), 'Krupina', (Select id from Country where name='Banskobystrick˝ kraj') );
+Insert into County values( nextval('hibernate_sequence'), 'Koöice', (Select id from Country where name='Koöick˝ kraj') );
+Insert into County values( nextval('hibernate_sequence'), 'Keûmarok', (Select id from Country where name='Preöovsk˝ kraj') );
+Insert into County values( nextval('hibernate_sequence'), 'KysuckÈ NovÈ Mesto', (Select id from Country where name='éilinsk˝ kraj') );
+Insert into County values( nextval('hibernate_sequence'), 'Kom·rno', (Select id from Country where name='Nitriansky kraj') );
+Insert into County values( nextval('hibernate_sequence'), 'Koöice - okolie', (Select id from Country where name='Koöick˝ kraj') );
+Insert into County values( nextval('hibernate_sequence'), 'LuËenec', (Select id from Country where name='Banskobystrick˝ kraj') );
+Insert into County values( nextval('hibernate_sequence'), 'LevoËa', (Select id from Country where name='Preöovsk˝ kraj') );
+Insert into County values( nextval('hibernate_sequence'), 'Liptovsk˝ Mikul·ö', (Select id from Country where name='éilinsk˝ kraj') );
+Insert into County values( nextval('hibernate_sequence'), 'Levice', (Select id from Country where name='Nitriansky kraj') );
+Insert into County values( nextval('hibernate_sequence'), 'Malacky', (Select id from Country where name='Bratislavsk˝ kraj') );
+Insert into County values( nextval('hibernate_sequence'), 'Michalovce', (Select id from Country where name='Koöick˝ kraj') );
+Insert into County values( nextval('hibernate_sequence'), 'Medzilaborce', (Select id from Country where name='Preöovsk˝ kraj') );
+Insert into County values( nextval('hibernate_sequence'), 'Martin', (Select id from Country where name='éilinsk˝ kraj') );
+Insert into County values( nextval('hibernate_sequence'), 'Myjava', (Select id from Country where name='TrenËiansky kraj')  );
+Insert into County values( nextval('hibernate_sequence'), 'NovÈ Mesto n/V·h.', (Select id from Country where name='TrenËiansky kraj')  );
+Insert into County values( nextval('hibernate_sequence'), 'N·mestovo', (Select id from Country where name='éilinsk˝ kraj') );
+Insert into County values( nextval('hibernate_sequence'), 'Nitra', (Select id from Country where name='Nitriansky kraj')  );
+Insert into County values( nextval('hibernate_sequence'), 'NovÈ Z·mky', (Select id from Country where name='Nitriansky kraj') );
+Insert into County values( nextval('hibernate_sequence'), 'Povaûsk· Bystrica', (Select id from Country where name='TrenËiansky kraj')  );
+Insert into County values( nextval('hibernate_sequence'), 'Prievidza', (Select id from Country where name='TrenËiansky kraj')  );
+Insert into County values( nextval('hibernate_sequence'), 'Partiz·nske', (Select id from Country where name='TrenËiansky kraj')  );
+Insert into County values( nextval('hibernate_sequence'), 'Pezinok', (Select id from Country where name='Bratislavsk˝ kraj'));
+Insert into County values( nextval('hibernate_sequence'), 'Pieöùany', (Select id from Country where name='Trnavsk˝ kraj') );
+Insert into County values( nextval('hibernate_sequence'), 'Preöov', (Select id from Country where name='Preöovsk˝ kraj') );
+Insert into County values( nextval('hibernate_sequence'), 'Poprad', (Select id from Country where name='Preöovsk˝ kraj') );
+Insert into County values( nextval('hibernate_sequence'), 'Polt·r', (Select id from Country where name='Banskobystrick˝ kraj') );
+Insert into County values( nextval('hibernate_sequence'), 'P˙chov', (Select id from Country where name='TrenËiansky kraj')  );
+Insert into County values( nextval('hibernate_sequence'), 'Rev˙ca', (Select id from Country where name='Banskobystrick˝ kraj') );
+Insert into County values( nextval('hibernate_sequence'), 'Ruûomberok', (Select id from Country where name='éilinsk˝ kraj') );
+Insert into County values( nextval('hibernate_sequence'), 'Rimavsk· Sobota', (Select id from Country where name='Banskobystrick˝ kraj') );
+Insert into County values( nextval('hibernate_sequence'), 'RoûÚava', (Select id from Country where name='Koöick˝ kraj') );
+Insert into County values( nextval('hibernate_sequence'), 'äaæa', (Select id from Country where name='Nitriansky kraj') );
+Insert into County values( nextval('hibernate_sequence'), 'Sabinov', (Select id from Country where name='Preöovsk˝ kraj') );
+Insert into County values( nextval('hibernate_sequence'), 'Senec', (Select id from Country where name='Bratislavsk˝ kraj') );
+Insert into County values( nextval('hibernate_sequence'), 'Senica', (Select id from Country where name='Trnavsk˝ kraj') );
+Insert into County values( nextval('hibernate_sequence'), 'Skalica', (Select id from Country where name='Trnavsk˝ kraj') );
+Insert into County values( nextval('hibernate_sequence'), 'SvidnÌk', (Select id from Country where name='Preöovsk˝ kraj') );
+Insert into County values( nextval('hibernate_sequence'), 'Star· ºubovÚa', (Select id from Country where name='Preöovsk˝ kraj') );
+Insert into County values( nextval('hibernate_sequence'), 'Spiösk· Nov· Ves', (Select id from Country where name='Koöick˝ kraj') );
+Insert into County values( nextval('hibernate_sequence'), 'Sobrance', (Select id from Country where name='Koöick˝ kraj') );
+Insert into County values( nextval('hibernate_sequence'), 'Stropkov', (Select id from Country where name='Preöovsk˝ kraj') );
+Insert into County values( nextval('hibernate_sequence'), 'Snina', (Select id from Country where name='Preöovsk˝ kraj') );
+Insert into County values( nextval('hibernate_sequence'), 'TrenËÌn', (Select id from Country where name='TrenËiansky kraj')  );
+Insert into County values( nextval('hibernate_sequence'), 'TopoæËany', (Select id from Country where name='Nitriansky kraj') );
+Insert into County values( nextval('hibernate_sequence'), 'TurËianske Teplice', (Select id from Country where name='éilinsk˝ kraj') );
+Insert into County values( nextval('hibernate_sequence'), 'TvrdoöÌn', (Select id from Country where name='éilinsk˝ kraj') );
+Insert into County values( nextval('hibernate_sequence'), 'Trnava', (Select id from Country where name='Trnavsk˝ kraj') );
+Insert into County values( nextval('hibernate_sequence'), 'Trebiöov', (Select id from Country where name='Koöick˝ kraj') );
+Insert into County values( nextval('hibernate_sequence'), 'Veæk˝ KrtÌö', (Select id from Country where name='Banskobystrick˝ kraj') );
+Insert into County values( nextval('hibernate_sequence'), 'Vranov nad Topæou', (Select id from Country where name='Preöovsk˝ kraj') );
+Insert into County values( nextval('hibernate_sequence'), 'éilina', (Select id from Country where name='éilinsk˝ kraj') );
+Insert into County values( nextval('hibernate_sequence'), 'éarnovica', (Select id from Country where name='Banskobystrick˝ kraj') );
+Insert into County values( nextval('hibernate_sequence'), 'éiar nad Hronom', (Select id from Country where name='Banskobystrick˝ kraj') );
+Insert into County values( nextval('hibernate_sequence'), 'ZlatÈ Moravce', (Select id from Country where name='Nitriansky kraj') );
+Insert into County values( nextval('hibernate_sequence'), 'Zvolen', (Select id from Country where name='Banskobystrick˝ kraj') );
+
+CREATE TABLE Sector_of_work(
+id int8,
+name varchar(255),
+primary key(ID)
+);
+
+Insert into sector_of_work values(nextval('hibernate_sequence'), 'AdministratÌva'	);
+Insert into sector_of_work values(nextval('hibernate_sequence'), 'Automobilov˝ priem.'	);
+Insert into sector_of_work values(nextval('hibernate_sequence'), 'BanÌctvo, hutnÌctvo'	);
+Insert into sector_of_work values(nextval('hibernate_sequence'), 'BankovnÌctvo'	);
+Insert into sector_of_work values(nextval('hibernate_sequence'), 'BezpeËnosù a ochrana'	);
+Insert into sector_of_work values(nextval('hibernate_sequence'), 'Cestovn˝ ruch'	);
+Insert into sector_of_work values(nextval('hibernate_sequence'), 'Doprava, öpedÌcia'	);
+Insert into sector_of_work values(nextval('hibernate_sequence'), 'Drevospracuj˙ci priem.'	);
+Insert into sector_of_work values(nextval('hibernate_sequence'), 'Ekonomika, financie'	);
+Insert into sector_of_work values(nextval('hibernate_sequence'), 'Elektrotechnika'	);
+Insert into sector_of_work values(nextval('hibernate_sequence'), 'Chemick˝ priemysel'	);
+Insert into sector_of_work values(nextval('hibernate_sequence'), 'InformaËnÈ technolÛgie'	);
+Insert into sector_of_work values(nextval('hibernate_sequence'), 'Leasing'	);
+Insert into sector_of_work values(nextval('hibernate_sequence'), 'Manaûment kvality'	);
+Insert into sector_of_work values(nextval('hibernate_sequence'), 'Marketing, reklama'	);
+Insert into sector_of_work values(nextval('hibernate_sequence'), 'Obchod'	);
+Insert into sector_of_work values(nextval('hibernate_sequence'), 'PoisùovnÌctvo'	);
+Insert into sector_of_work values(nextval('hibernate_sequence'), 'Poænohospod·rstvo'	);
+Insert into sector_of_work values(nextval('hibernate_sequence'), 'PomocnÈ pr·ce'	);
+Insert into sector_of_work values(nextval('hibernate_sequence')	, 'Pr·vo a legislatÌva'	);
+Insert into sector_of_work values(nextval('hibernate_sequence'), 'Prekladateæstvo'	);
+Insert into sector_of_work values(nextval('hibernate_sequence'), 'Sluûby'	);
+Insert into sector_of_work values(nextval('hibernate_sequence'), 'StavebnÌctvo a reality'	);
+Insert into sector_of_work values(nextval('hibernate_sequence'), 'Stroj·rstvo'	);
+Insert into sector_of_work values(nextval('hibernate_sequence'), 'äkolstvo, veda, v˝skum'	);
+Insert into sector_of_work values(nextval('hibernate_sequence'), 'ät·tna spr·va'	);
+Insert into sector_of_work values(nextval('hibernate_sequence'), 'Telekomunik·cie'	);
+Insert into sector_of_work values(nextval('hibernate_sequence'), 'Umenie a kult˙ra'	);
+Insert into sector_of_work values(nextval('hibernate_sequence'), 'Vodohospod.,lesnÌctvo'	);
+Insert into sector_of_work values(nextval('hibernate_sequence'), 'V˝roba'	);
+Insert into sector_of_work values(nextval('hibernate_sequence'), 'Z·kaznÌcka podpora'	);
+Insert into sector_of_work values(nextval('hibernate_sequence'), 'ZdravotnÌctvo, farm·cia'	);
+Insert into sector_of_work values(nextval('hibernate_sequence'), 'éurnalistika, mÈdi·'	);
+
+
+CREATE TABLE Contract_type(
+id int8,
+name varchar(255),
+primary key(ID)
+);
+
+Insert into contract_type values(nextval('hibernate_sequence'), 'Pln˝ ˙v‰zok'	);
+Insert into contract_type values(nextval('hibernate_sequence'), 'Skr·ten˝ ˙v‰zok'	);
+Insert into contract_type values(nextval('hibernate_sequence'), 'éivnosù'	);
+Insert into contract_type values(nextval('hibernate_sequence'), 'Na dohodu'	);
+Insert into contract_type values(nextval('hibernate_sequence'), 'Brig·da'	);
+
+CREATE TABLE ADVERT_TYPE(
+id int8,
+name varchar(255),
+primary key (ID)
+);
+
+Insert into advert_type values(nextval('hibernate_sequence'), 'Ponuka');
+Insert into advert_type values(nextval('hibernate_sequence'), 'Hæad·m');
+
+CREATE TABLE Handicap_type(
+id int8,
+name varchar(255),
+primary key(ID)
+);
+
+Insert into handicap_type values(nextval('hibernate_sequence'), 'Bez postihnutia');
+Insert into handicap_type values(nextval('hibernate_sequence'), 'Kr·tkozrak˝ / slabozrak˝');
+Insert into handicap_type values(nextval('hibernate_sequence'), 'MotorickÈ obmedzenie');
+Insert into handicap_type values(nextval('hibernate_sequence'), 'InÈ');
+
+CREATE TABLE CMS_CONTENT(
+id int8,
+name varchar(255),
+content varchar(5000),
+primary key(ID)
+);
+
+Insert into cms_content values(nextval('hibernate_sequence'), 'job','');
+Insert into cms_content values(nextval('hibernate_sequence'), 'main','');
+Insert into cms_content values(nextval('hibernate_sequence'), 'registration','');
+Insert into cms_content values(nextval('hibernate_sequence'), 'forum','');
+Insert into cms_content values(nextval('hibernate_sequence'), 'event','');
+Insert into cms_content values(nextval('hibernate_sequence'), 'education','');
+Insert into cms_content values(nextval('hibernate_sequence'), 'living','');
+Insert into cms_content values(nextval('hibernate_sequence'), 'information','');
+Insert into cms_content values(nextval('hibernate_sequence'), 'healthAid','');
+Insert into cms_content values(nextval('hibernate_sequence'), 'dayCare','');
+
+CREATE TABLE GLOBAL_SETTING(
+id int8,
+name varchar(255),
+value varchar(255)  NOT NULL,
+primary key(ID)
+);
+
+Insert into global_setting values(nextval('hibernate_sequence'), 'jobDeactivation','1');
+Insert into global_setting values(nextval('hibernate_sequence'), 'otherDeactivation','1');
+
+
+CREATE TABLE Thread ( 
+	id int8 NOT NULL,
+	thread_name varchar(255) NOT NULL,
+	owner int8 NOT NULL,
+	import_date timestamp,
+	state boolean,
+	active boolean,
+	theme int8 NOT NULL,
+	change_date timestamp,
+	primary key(ID)
+);
+
+
+CREATE TABLE Comment ( 
+	id int8 NOT NULL,
+	comment_name varchar(512) NOT NULL,
+	owner int8 NOT NULL,
+	import_date timestamp,
+	state boolean,
+	active boolean,
+	thread int8,
+	change_date timestamp,
+	notice int8 DEFAULT 0,
+	event int8,
+	information int8,
+	healthAid int8,
+	primary key(ID)
+);
+
+
+CREATE TABLE Theme ( 
+	id int8 NOT NULL,
+	name varchar(255) NOT NULL,
+	import_date timestamp,
+	change_date timestamp,
+	state boolean,
+	primary key(ID)
+);
+
+--Insert into Theme values(1, 'Cestovanie MHD','','','true');
+
+CREATE TABLE Events ( 
+	id int8 NOT NULL,
+	name varchar(255),
+	user_id int8,
+	type int8,
+	town varchar(255),
+	county int8,
+	address varchar(255),
+	start_date timestamp,
+	end_date timestamp,
+	events_length int8,
+	notes varchar(5000),
+	guest_count int8,
+	state boolean,
+	active boolean,
+	import_date timestamp,
+	change_date timestamp,
+	primary key(ID)
+);
+
+CREATE TABLE EVENT_TYPE(
+id int8,
+name varchar(255),
+primary key (ID)
+);
+
+CREATE TABLE PICTURE(
+id int8,
+import_date timestamp,
+change_date timestamp,
+link varchar(255),
+active boolean,
+state boolean,
+image bytea,
+owner int8,
+event int8,
+living int8,
+primary key (ID)
+);
+
+
+Insert into event_type values(nextval('hibernate_sequence'), 'Stretnutie');
+Insert into event_type values(nextval('hibernate_sequence'), 'Kult˙ra');
+
+CREATE TABLE SCHOOL ( 
+	id integer NOT NULL,
+	name varchar(255) NOT NULL,
+	type integer NULL,
+	region int8 NOT NULL,
+	town varchar(255) NOT NULL,
+	address varchar(255) NOT NULL,
+	home_page varchar(255) NULL,
+	contact_person varchar(255) NOT NULL,
+	phone varchar(255) NULL,
+	email varchar(255) NULL,
+	state boolean NOT NULL,
+	active boolean NOT NULL,
+	import_date timestamp,
+	change_date timestamp,
+	user_id integer NOT NULL,
+	note varchar(5000),
+	primary key (ID)
+)
+;
+
+CREATE TABLE SCHOOL_TYPE(
+id int8,
+name varchar(255),
+primary key (ID)
+);
+
+Insert into school_type values(nextval('hibernate_sequence'), 'Matersk· ökÙlka');
+Insert into school_type values(nextval('hibernate_sequence'), 'Z·kladn· ökola');
+Insert into school_type values(nextval('hibernate_sequence'), 'äpeci·lna ökola');
+Insert into school_type values(nextval('hibernate_sequence'), 'ReedukaËnÈ centrum');
+Insert into school_type values(nextval('hibernate_sequence'), 'äpecializovan· stredn· ökola');
+Insert into school_type values(nextval('hibernate_sequence'), '8-roËnÈ gymn·zium');
+Insert into school_type values(nextval('hibernate_sequence'), 'Gymn·zium');
+Insert into school_type values(nextval('hibernate_sequence'), 'Vysok· ökola');
+
+
+
+CREATE TABLE COURSE ( 
+	id int8 NOT NULL,
+	name varchar(255) NOT NULL,
+	type int8,
+	user_id int8 NOT NULL,
+	region int8 NULL,
+	town varchar(255) NULL,
+	address varchar(255) NULL,
+	phone varchar(255) NULL,
+	email varchar(255) NULL,
+	contact_person varchar(255) NULL,
+	date_start timestamp,
+	length int8 NOT NULL,
+	price int8 NULL,
+	note varchar(5000) NULL,
+	state boolean NOT NULL,
+	active boolean NOT NULL,
+	import_date timestamp,
+	change_date timestamp,
+	primary key (ID)
+)
+;
+
+CREATE TABLE COURSE_TYPE(
+id int8,
+name varchar(255),
+primary key (ID)
+);
+
+Insert into course_type values(nextval('hibernate_sequence'), 'RekvalifikaËn˝ kurz');
+Insert into course_type values(nextval('hibernate_sequence'), 'Kurz zruËnosti');
+
+
+CREATE TABLE Livings ( 
+	id int8 NOT NULL,
+	user_id int8 NOT NULL,
+	region int8 NOT NULL,
+	town varchar(255) NOT NULL,
+	address varchar(255) NULL,
+	rooms integer NULL,
+	type_of_living int8 NOT NULL,
+	type_of_stuff int8 NOT NULL,
+	size integer NULL,
+	price integer NULL,
+	date_living timestamp NULL,
+	note varchar(5000) NULL,
+	state boolean NOT NULL,
+	active boolean NOT NULL,
+	import_date timestamp NOT NULL,
+	change_date timestamp NOT NULL,
+	primary key (ID)
+)
+;
+
+CREATE TABLE TYPE_OF_LIVING(
+id int8,
+name varchar(255),
+primary key (ID)
+);
+
+Insert into type_of_living values(nextval('hibernate_sequence'), 'Pren·jom');
+Insert into type_of_living values(nextval('hibernate_sequence'), 'Hæad·m');
+Insert into type_of_living values(nextval('hibernate_sequence'), 'Predaj');
+Insert into type_of_living values(nextval('hibernate_sequence'), 'Ponuka');
+
+CREATE TABLE TYPE_OF_STUFF(
+id int8,
+name varchar(255),
+primary key (ID)
+);
+
+Insert into type_of_stuff values(nextval('hibernate_sequence'), 'GarzÛnka');
+Insert into type_of_stuff values(nextval('hibernate_sequence'), 'Byt 1+1');
+Insert into type_of_stuff values(nextval('hibernate_sequence'), 'Byt 2+1');
+Insert into type_of_stuff values(nextval('hibernate_sequence'), 'Podkrovn˝ byt');
+
+CREATE TABLE UserEvent (
+	id int8 NOT NULL,
+	user_id int8 NOT NULL,
+	event int8 NOT NULL,
+	primary key (ID)
+);
+
+
+CREATE TABLE Information ( 
+	id int8 NOT NULL,
+	name varchar(50) NOT NULL,
+	state boolean NOT NULL,
+	active boolean NOT NULL,
+	import_date timestamp NOT NULL,
+	change_date timestamp NOT NULL,
+	content varchar(5000) NULL,
+	user_id int8 NOT NULL,
+	primary key (ID)
+)
+;
+
+CREATE TABLE HealthAid ( 
+	id int8 NOT NULL,
+	name varchar(50) NOT NULL,
+	state boolean NOT NULL,
+	active boolean NOT NULL,
+	import_date timestamp NOT NULL,
+	change_date timestamp NOT NULL,
+	content varchar(5000) NULL,
+	handicap int8 NOT NULL,
+	user_id int8 NOT NULL,
+	primary key (ID)
+)
+;
+
+CREATE TABLE Day_care ( 
+	id int8 NOT NULL,
+	TYPE_OF_ADVERT int8 NOT NULL,
+	HANDICAP_TYPE int8 NOT NULL,
+	COUNTY int8 NULL,
+	town varchar(255) NULL,
+	DESCRIPTION varchar(5000) NULL,
+	SHORT_DESC varchar(255) NULL,
+	CREATION_DATE timestamp NOT NULL,
+	CHANGE_DATE timestamp NOT NULL,
+	START_DATE timestamp NOT NULL,
+	END_DATE timestamp NOT NULL,
+	state boolean NOT NULL,
+	active boolean NOT NULL,
+	user_id int8 NOT NULL,
+	primary key (ID)
+)
+;
+
+Insert INTO theme(id, name, state, import_date, change_date) VALUES (nextval('hibernate_sequence'),'ZdravotnÈ problÈmy', '1', now(), now());
+Insert INTO theme(id, name, state, import_date, change_date) VALUES (nextval('hibernate_sequence'), 'LieËebnÈ pobyty', '1', now(), now());
+Insert INTO theme(id, name, state, import_date, change_date) VALUES (nextval('hibernate_sequence'), 'Voæn˝ Ëas', '1', now(), now());
+Insert INTO theme(id, name, state, import_date, change_date) VALUES (nextval('hibernate_sequence'), 'Prv· pomoc', '1', now(), now());
+Insert INTO theme(id, name, state, import_date, change_date) VALUES (nextval('hibernate_sequence'), 'N·vrhy pre zlepöenie port·lu ZçP', '1', now(), now());
+Insert INTO theme(id, name, state, import_date, change_date) VALUES (nextval('hibernate_sequence'), 'InÈ', '1', now(), now());
+Insert INTO theme(id, name, state, import_date, change_date) VALUES (nextval('hibernate_sequence'), 'Off-topic (Mimo ZçP)', '1',now(), now());
+
+insert into REGISTEREDUSER (ID, NAME, SURNAME, LOGIN, PASSWORD,ADMIN,STATE,PREFERREGION,TOWN,EMAIL,REGISTRATIONDATE,CHANGEDATE,HANDICAPTYPE,REGION) values (nextval('hibernate_sequence'),'Admin','Administrator','admin','21232f297a57a5a743894ae4a801fc3','true','true','true','Bratislava','admin@ztp-portal.sk',now(),now(),'121','9');
+insert into REGISTEREDUSER (ID, NAME, SURNAME, LOGIN, PASSWORD,ADMIN,STATE,PREFERREGION,TOWN,EMAIL,REGISTRATIONDATE,CHANGEDATE,HANDICAPTYPE,REGION) values (nextval('hibernate_sequence'),'Admin','Administrator','superadministrator','21232f297a57a5a743894ae4a801fc3','true','true','true','Bratislava','admin@ztp-portal.sk',now(),now(),'121','9');
+

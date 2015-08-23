@@ -1,0 +1,168 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<wicket:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="keywords" content="ZŤP, zdravotne ťažko postihnutý, vzdelávanie, kurz">
+	<title>ZTP Portál - vzdelávací kurz</title>
+	<script type="text/javascript" src="javascript/mojozoom.js"></script>
+	<link type="text/css" href="mojozoom.css" rel="stylesheet" />
+
+	<SCRIPT type="text/javascript" src="javascript/fontResizer.js"></SCRIPT>
+	<SCRIPT type="text/javascript" src="javascript/vkboard2.js"></SCRIPT>
+	<SCRIPT type="text/javascript" src="javascript/virtualKeyboard.js"></SCRIPT>
+
+</wicket:head>
+<body>
+<SCRIPT type="text/javascript" src="javascript/wz_tooltip.js"></SCRIPT>
+<div wicket:id="headerPanel">headerPanel</div>
+
+<div wicket:id="feedback">User Feedback</div>
+
+<br />
+<a name="top"></a>
+<table class="centerWrapper">
+	<tr>
+		<td>
+		<table class="outerNavigationPanelBorder" ALIGN="LEFT">
+			<tr>
+				<td valign="top">
+				<table class="interNavigationPanel" ALIGN="LEFT">
+					<tr>
+						<td><a wicket:id="schoolListLink" href="#">Zoznam kurzov</a></td>
+					</tr>
+					<tr>
+						<td><a wicket:id="newSchoolLink">Vložiť novú inštitúciu</a></td>
+					</tr>
+					<tr>
+						<td><a wicket:id="newCourseLink">Vložiť nový kurz</a></td>
+					</tr>
+				</table>
+				</td>
+			</tr>
+		</table>
+		</td>
+
+		<td></td>
+
+		<td>
+		<table class="outerMainContentBorder">
+			<tr>
+				<td>
+				<table class="mainContent">
+					<tr>
+						<td>
+						<table class="whereIam">
+							<tr>
+								<td>Domov > Zobrazenie kurzu</td>
+								<td><A href="javascript:keyb_change()"
+									onclick=
+	javascript: blur();
+id="switch"><img
+									src="img/klavesnica.png" border="0" alt="Virtuálna klávesnica" /></A></td>
+								<td id="sizeController"><b><a href="javascript:decreaseFontSize();">&#709;</a> A
+								<a href="javascript:increaseFontSize();">&#708;</a></b></td>
+							</tr>
+						</table>
+						</td>
+					</tr>
+					<tr>
+						<td>
+						<table class="pageContent">
+							
+							<tr>
+								<td>
+									<table class="detail">
+									<form wicket:id="courseViewForm">
+									
+									<tr class="inputRow">
+										<td><label wicket:id="courseTypeLabel"></label></td>
+										<td><label wicket:id="courseType">
+										</label></td>
+									</tr>
+									
+									<tr class="inputRow">
+										<td><label wicket:id="couserNameLabel"></label></td>
+										<td><label wicket:id="courseName">
+										</label></td>
+									</tr>
+
+									<tr class="inputRow">
+										<td><label wicket:id="courseContactPersonLabel"></label></td>
+										<td><label wicket:id="courseContactPerson"> 
+										</label></td>
+									</tr>		
+
+									<tr class="inputRow">
+										<td><label wicket:id="courseEmailContactLabel"></label></td>
+										<td><label wicket:id="courseEmailContact"> 
+										</label></td>
+									</tr>
+									
+									<tr class="inputRow">
+										<td><label wicket:id="coursePhoneLabel"></label></td>
+										<td><label wicket:id="coursePhone"> 
+										</label></td>
+									</tr>
+
+									<tr class="inputRow">
+										<td><label wicket:id="coursePriceLabel"></label></td>
+										<td><label wicket:id="coursePrice"> 
+										</label></td>
+									</tr>									
+									
+									<tr class="inputRow">
+										<td><label wicket:id="courseStartDateLabel"></label></td>
+										<td><label wicket:id="courseStartDate"
+											id="address"></label></td>
+									</tr>
+									
+									<tr class="inputRow">
+										<td><label wicket:id="courseAddressLabel"></label></td>
+										<td><label wicket:id="courseAddress"
+											id="address"></label></td>
+									</tr>
+									
+									<tr class="inputRow">
+										<td><label wicket:id="courseCountryLabel"></label></td>
+										<td><label wicket:id="courseCountry">
+										</label></td>
+										
+									</tr><tr class="inputRow">
+										<td><label wicket:id="courseCountyLabel"></label></td>
+										<td><label wicket:id="courseCounty">
+										</label></td>
+									</tr>
+
+									<tr class="inputRow">
+										<td><label wicket:id="courseTownLabel"></label></td>
+										<td><label wicket:id="courseTown">
+										</label></td>
+									</tr>
+									
+									<tr class="inputRow">
+										<td colspan="2"><wicket:container wicket:id="cmsContent"></wicket:container></td>
+									</tr>
+
+									</form>
+								</table>
+								
+								
+								</td>
+							</tr>
+							<tr>
+								<td>
+								<DIV id="keyboard"></DIV>
+								</td>
+							</tr>
+						</table>
+						</td>
+					</tr>
+				</table>
+				</td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+</table>
+</body>
+</html>

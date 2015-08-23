@@ -1,0 +1,304 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<wicket:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>ZTP Portál - Vaša cesta k informáciám</title>
+	<script type="text/javascript" src="javascript/mojozoom.js"></script>
+	<link type="text/css" href="mojozoom.css" rel="stylesheet" />
+
+
+	<script>
+	window.onload = function() {
+		/// novinky zamestnanie
+		var newJobList = document.getElementById("newJobList");
+
+		if (!document.getElementById("jobNewArticles")) {
+			newJobList.style.display = "none";
+		}
+
+		/// novinky forum
+		var newForumList = document.getElementById("newCommentList");
+
+		if (!document.getElementById("forumNewComment")) {
+			newForumList.style.display = "none";
+		}
+
+		/// novinky udalosti
+		var newEventList = document.getElementById("newEventList");
+
+		if (!document.getElementById("eventNewArticles")) {
+			newEventList.style.display = "none";
+		}
+
+		/// novinky ubytovanie
+		var newLivingList = document.getElementById("newLivingList");
+
+		if (!document.getElementById("livingNewArticles")) {
+			newLivingList.style.display = "none";
+		}
+
+		/// novinky skolstvo
+		var newEducationList = document.getElementById("newEducationList");
+
+		if (!document.getElementById("educationNewArticles")) {
+			newEducationList.style.display = "none";
+		}
+
+		/// novinky informacie
+		var newInformationList = document.getElementById("newInformationList");
+
+		if (!document.getElementById("informationNewArticles")) {
+			newInformationList.style.display = "none";
+		}
+
+		/// novinky pomocky
+		var newHealthAidList = document.getElementById("newHealthAidList");
+
+		if (!document.getElementById("healthAidNewArticles")) {
+			newHealthAidList.style.display = "none";
+		}
+
+		/// novinky opatrovatelstvo
+		var newDayCareList = document.getElementById("newDayCareList");
+
+		if (!document.getElementById("dayCareNewArticles")) {
+			newDayCareList.style.display = "none";
+		}
+
+	}
+</script>
+
+</wicket:head>
+<body>
+<SCRIPT type="text/javascript" src="javascript/wz_tooltip.js"></SCRIPT>
+
+<div wicket:id="headerPanel">headerPanel</div>
+<div wicket:id="feedback">User Feedback</div>
+
+<table class="centerWrapper">
+	<tr>
+		<td>
+
+		<table class="coreMainPage">
+			<tr>
+				<td>
+				<table class="interCoreMainPage">
+					<tr>
+						<td><wicket:container wicket:id="cmsContent"></wicket:container>
+						</td>
+					</tr>
+					<tr>
+						<td><br />
+						</td>
+					</tr>
+					<tr>
+						<div class="heading1">Aktuálne novinky</div>
+					</tr>
+					<tr>
+						<td>
+						<table class="newsList" id="newInformationList">
+							<tr>
+								<td class="informationIcon"></td>
+								<td class="newList">
+								<table class="informationNewList">
+									<div wicket:id="informationNewArticles"
+										class="informationNewArticles" id="informationNewArticles">
+									<tr>
+										<td wicket:id="informationName" class="name"></td>
+										<td wicket:id="informationOwner" class="owner"></td>
+										<td class="detail"><a wicket:id="detail" href="#">Zobraz</a></td>
+									</tr>
+									</div>
+								</table>
+								</td>
+							</tr>
+						</table>
+						<table class="newsList" id="newEventList">
+							<tr>
+								<td class="eventIcon"></td>
+								<td class="newList">
+								<table class="eventNewList">
+									<div wicket:id="eventNewArticles" class="eventNewArticles"
+										id="eventNewArticles">
+									<tr>
+										<td wicket:id="eventName" class="name"></td>
+										<td wicket:id="eventTown" class="town"></td>
+										<td wicket:id="eventOwner" class="owner"></td>
+										<td class="detail"><a wicket:id="detail" href="#">Zobraz</a></td>
+									</tr>
+									</div>
+								</table>
+								</td>
+							</tr>
+						</table>
+						<table class="newsList" id="newJobList">
+							<tr>
+								<td class="jobIcon"></td>
+								<td class="newList">
+								<table class="jobNewList">
+									<div wicket:id="jobNewArticles" class="jobNewArticles"
+										id="jobNewArticles">
+									<tr>
+										<td wicket:id="specification" class="name"></td>
+										<td wicket:id="town" class="town"></td>
+										<td class="detail"><a wicket:id="detail" href="#">Zobraz</a></td>
+									</tr>
+									</div>
+								</table>
+								</td>
+							</tr>
+						</table>
+						<table class="newsList" id="newEducationList">
+							<tr>
+								<td class="educationIcon"></td>
+								<td class="newList">
+								<table class="educationNewList">
+									<div wicket:id="educationNewArticles"
+										class="educationNewArticles" id="educationNewArticles">
+									<tr>
+										<td wicket:id="courseName" class="name"></td>
+										<td wicket:id="courseTown" class="town"></td>
+										<td wicket:id="coursePrice" class="price"></td>
+										<td class="detail"><a wicket:id="detail" href="#">Zobraz</a></td>
+									</tr>
+									</div>
+								</table>
+								</td>
+							</tr>
+						</table>
+						<table class="newsList" id="newLivingList">
+							<tr>
+								<td class="livingIcon"></td>
+								<td class="newList">
+								<table class="livingNewList">
+									<div wicket:id="livingNewArticles" class="livingNewArticles"
+										id="livingNewArticles">
+									<tr>
+										<td wicket:id="livingType" class="name"></td>
+										<td wicket:id="livingTown" class="town"></td>
+										<td wicket:id="livingPrice" class="price"> EUR</td>
+										<td class="detail"><a wicket:id="detail" href="#">Zobraz</a></td>
+									</tr>
+									</div>
+								</table>
+								</td>
+							</tr>
+						</table>
+						<table class="newsList" id="newHealthAidList">
+							<tr>
+								<td class="healthAidIcon"></td>
+								<td class="newList">
+								<table class="healthAidNewList">
+									<div wicket:id="healthAidNewArticles"
+										class="healthAidNewArticles" id="healthAidNewArticles">
+									<tr>
+										<td wicket:id="healthAidName" class="name"></td>
+										<td wicket:id="healthAidHandicapType" class="type"></td>
+										<td class="detail"><a wicket:id="detail" href="#">Zobraz</a></td>
+									</tr>
+									</div>
+								</table>
+								</td>
+							</tr>
+						</table>
+						<table class="newsList" id="newDayCareList">
+							<tr>
+								<td class="dayCareIcon"></td>
+								<td class="newList">
+								<table class="dayCareNewList">
+									<div wicket:id="dayCareNewArticles" class="dayCareNewArticles"
+										id="dayCareNewArticles">
+									<tr>
+										<td wicket:id="dayCareName" class="name"></td>
+										<td wicket:id="dayCareHandicapType" class="type"></td>
+										<td class="detail"><a wicket:id="detail" href="#">Zobraz</a></td>
+									</tr>
+									</div>
+								</table>
+								</td>
+							</tr>
+						</table>
+						<table class="newsList" id="newCommentList">
+							<tr>
+								<td class="commentIcon"></td>
+								<td class="newList">
+								<table class="commentNewList">
+									<div wicket:id="forumNewComment" class="forumNewComment"
+										id="forumNewComment">
+									<tr>
+										<td wicket:id="commentTheme" class="theme"></td>
+										<td wicket:id="commentThread" class="thread"></td>
+										<td wicket:id="commentContent" class="content"></td>
+										<td wicket:id="commentOwner" class="owner"></td>
+										<td class="detail"><a wicket:id="detail" href="#">Zobraz</a></td>
+									</tr>
+									</div>
+								</table>
+								</td>
+							</tr>
+						</table>
+						</td>
+						<td>
+						<table>
+							<tr>
+								<td>Dnes má meniny <b><span id="js_meniny" tag="[sName]"><a href="http://meniny.pmacko.sk">Meniny na web</a></span> <script> if (document.characterSet) { var charset = document.characterSet; } else if (document.charset) { var charset = document.charset; } else { var charset = 'none'; } document.write('<'+'script type="text/javascript" src="http://meniny.pmacko.sk/js-sk.php?char='+charset+'"><'+'/script>'); </script></b>
+								</td>
+							</tr>
+<!--							<tr>-->
+<!--								<td><script-->
+<!--									src="http://www.gmodules.com/ig/ifr?url=http://addthisshare.com/calendar.xml&amp;up_calendarFeeds=&amp;up_calendarColors=&amp;up_firstDay=1&amp;up_dateFormat=1&amp;up_timeFormat=13%3A00&amp;up_showDatepicker=1&amp;up_hideAgenda=0&amp;up_showEmptyDays=0&amp;up_showExpiredEvents=1&amp;synd=open&amp;w=250&amp;h=165&amp;title=__MSG_Google_Calendar__&amp;lang=sk&amp;country=ALL&amp;border=%23ffffff%7C0px%2C1px+solid+%23ffdd00%7C0px%2C2px+solid+%23ffdd33%7C0px%2C2px+solid+%23ffee99&amp;output=js"></script>-->
+<!--								</td>-->
+<!--							</tr>-->
+<!--							<tr>-->
+<!--								<td>-->
+<!--<script src="http://www.gmodules.com/ig/ifr?url=http://hosting.gmodules.com/ig/gadgets/file/107950459797439355026/Google_Search_Box_Calendar.xml&amp;synd=open&amp;w=200&amp;h=150&amp;title=Google+Public+Calendar+Search&amp;border=%23ffffff%7C3px%2C1px+solid+%23999999&amp;output=js"></script>								</td>-->
+<!--							</tr>-->
+							<tr>
+								<td>
+								<div style="width: 70px; margin: auto; text-align: center;">
+								<script type="text/javascript"
+									src="http://www.in-pocasie.sk/pocasie-pre-web/pocasie-pre-web.php?typ=modern&amp;layout=pruh&amp;region=0&amp;barva-den=2086c0&amp;barva-teplota=125b8b&amp;dni=1&amp;lang=sk">
+	
+</script> <a href="http://www.in-pocasie.sk" title="In-počasí">In-počasie</a> <a
+									href="http://www.meteoinfo.sk" title="Meteoinfo">Meteoinfo</a>
+								</div>
+								<br />
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<table border="1" height="200px" width="300px">
+										<tr>
+											<td>
+											Reklama websupport
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+<!--							<tr>-->
+<!--								<td><a-->
+<!--									href='http://www.mozilla.com/?from=sfx&amp;uid=0&amp;t=563'><img-->
+<!--									src='http://sfx-images.mozilla.org/firefox/3.6/173x26_get_orange.png'-->
+<!--									alt='Firefox' border='0' /></a></td>-->
+<!--							</tr>-->
+<!--							<tr>-->
+<!--								<td><script-->
+<!--									src="http://www.gmodules.com/ig/ifr?url=http://www.labpixies.com/campaigns/horoscope/horoscope.xml&amp;up_k1=&amp;up_k2=&amp;up_k3=&amp;up_owner_settings=&amp;up_last_item_id=&amp;up_last_item_id_date=&amp;up_filter_type=&amp;up_total_count=0&amp;synd=open&amp;w=320&amp;h=240&amp;title=Horoskop&amp;lang=sk&amp;country=ALL&amp;border=%23ffffff%7C1px%2C1px+solid+black%7C1px%2C1px+solid+black%7C0px%2C1px+black&amp;output=js"></script>-->
+<!--								</td>-->
+<!--							</tr>-->
+						</table>
+						</td>
+					</tr>
+				</table>
+				</td>
+			</tr>
+		</table>
+
+		</td>
+	</tr>
+</table>
+
+<div wicket:id="footPanel">footPanel</div>
+</body>
+</html>
